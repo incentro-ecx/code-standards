@@ -4,11 +4,11 @@
 
 This package provides a set of shared [Typescript](https://www.typescriptlang.org/) configuration files that can be used across different projects.
 
-- [🏠 Base](#-base) - `@incentro-ecx/typescript-config/configs/base/tsconfig.json`
-- [📦 Package](#-package) - `@incentro-ecx/typescript-config/configs/package/tsconfig.json`
-- [🟩 Package - Node](#-package---node) - `@incentro-ecx/typescript-config/configs/package-node/tsconfig.json`
-- [⚛️ Package - React](#%EF%B8%8F-package---react) - `@incentro-ecx/typescript-config/configs/package-react/tsconfig.json`
-- [🦖 Docusaurus](#-docusaurus) - `@incentro-ecx/typescript-config/configs/docusaurus/tsconfig.json`
+- [🏠 Base](#-base) - `@incentro-ecx/typescript-config/tsconfig/base.json`
+- [📦 Package](#-package) - `@incentro-ecx/typescript-config/tsconfig/package.json`
+- [🟩 Package - Node](#-package---node) - `@incentro-ecx/typescript-config/tsconfig/package-node.json`
+- [⚛️ Package - React](#-package---react) - `@incentro-ecx/typescript-config/tsconfig/package-react.json`
+- [🦖 Docusaurus](#-docusaurus) - `@incentro-ecx/typescript-config/tsconfig/docusaurus.json`
 
 ## 💾 Installation
 
@@ -18,6 +18,8 @@ To install the package, use the following command:
 pnpm add -D typescript @incentro-ecx/typescript-config
 ```
 
+You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
+
 ## 🪛 Usage
 
 After installing the package you can use the provided configuration as a basis by using [the `extends` keyword](https://www.typescriptlang.org/tsconfig#extends) in your `tsconfig.json`.
@@ -26,7 +28,7 @@ Here's an example:
 
 ```json
 {
-  "extends": "@micro.nova/typescript-config/configs/base/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/base.json"
 }
 ```
 
@@ -43,7 +45,7 @@ This is the base Typescript configuration that is applicable to all projects. Th
 
 ```json
 {
-  "extends": "@micro.nova/typescript/configs/base/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/base.json"
 }
 ```
 
@@ -55,7 +57,7 @@ This is the base Typescript configuration for all projects that are meant to be 
 
 ```json
 {
-  "extends": "@micro.nova/typescript/configs/package/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/package.json"
 }
 ```
 
@@ -67,7 +69,7 @@ This is the Typescript configuration for all projects that are meant to be publi
 
 ```json
 {
-  "extends": "@micro.nova/typescript/configs/package-node/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/package-node.json"
 }
 ```
 
@@ -79,7 +81,7 @@ This is the Typescript configuration for all projects that are meant to be publi
 
 ```json
 {
-  "extends": "@micro.nova/typescript/configs/package-react/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/package-react.json"
 }
 ```
 
@@ -91,7 +93,7 @@ This is the Typescript configuration for all Docusaurus projects. It's based on 
 
 ```json
 {
-  "extends": "@micro.nova/typescript/configs/docusaurus/tsconfig.json"
+  "extends": "@incentro-ecx/typescript-config/tsconfig/docusaurus.json"
 }
 ```
 
