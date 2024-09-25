@@ -1,0 +1,8 @@
+# Package managers
+node_modules
+
+## Turborepo cache files
+.turbo
+
+## Build output
+dist

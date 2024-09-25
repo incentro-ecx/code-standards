@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-ecx/eslint-config",
+  "version": "0.0.1",
+  "description": "A shared ESLint configuration for linting files.",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./docusaurus": {
+      "default": "./dist/configs/docusaurus.js",
+      "types": "./dist/configs/docusaurus.d.ts"
+    }
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean:build": "rimraf dist",
+    "clean:cache": "rimraf node_modules/.cache",
+    "clean:turbo": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*/\"",
+    "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
+    "format:prettier": "prettier --write . --cache",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
+    "lint:prettier": "prettier --check . --cache"
+  },
+  "dependencies": {
+    "@eslint/js": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-unicorn": "^52.0.0",
+    "globals": "^15.1.0",
+    "typescript-eslint": "^7.7.1"
+  },
+  "devDependencies": {
+    "@incentro-ecx/prettier-config": "workspace:^",
+    "@incentro-ecx/typescript-config": "workspace:^",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.12.7",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "~5.4.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
