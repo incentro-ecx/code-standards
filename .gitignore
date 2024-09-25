@@ -6,3 +6,6 @@ node_modules
 
 # Turbo
 .turbo
+
+# Configuration
+.env
