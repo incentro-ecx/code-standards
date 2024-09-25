@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-ecx/code-standards",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "changeset:add": "changeset add",
+    "changeset:publish": "changeset publish",
+    "changeset:version": "env-cmd changeset version",
+    "clean": "pnpm run \"/^clean:.*:root/\" && turbo run clean",
+    "clean:build": "turbo run clean:build",
+    "clean:cache": "turbo run clean:cache",
+    "clean:cache:root": "rimraf node_modules/.cache",
+    "clean:turbo": "turbo run clean:turbo",
+    "clean:turbo:root": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*:root/\" && turbo run format",
+    "format:eslint": "turbo run format:eslint",
+    "format:prettier": "pnpm run format:prettier:root && turbo run format:prettier",
+    "format:prettier:root": "prettier --write *.* --cache",
+    "lint": " pnpm run \"/^lint:.*:root/\" && turbo run lint",
+    "lint:eslint": "turbo run lint:eslint",
+    "lint:prettier": "pnpm run lint:prettier:root && turbo run lint:prettier",
+    "lint:prettier:root": "prettier --check *.* --cache",
+    "lint:typescript": "turbo run lint:typescript",
+    "prepare": "turbo run build --filter=@incentro-ecx/eslint-config",
+    "serve": "turbo run serve",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@incentro-ecx/prettier-config": "workspace:*",
+    "@svitejs/changesets-changelog-github-compact": "^1.1.0",
+    "env-cmd": "^10.1.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "turbo": "^2.1.2"
+  },
+  "packageManager": "pnpm@9.11.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}
