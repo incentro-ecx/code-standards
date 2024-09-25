@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-ecx/docusaurus-config",
+  "version": "0.3.0",
+  "description": "A shared Docusaurus configuration for building documentation sites.",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "files": [
+    "src/**"
+  ],
+  "scripts": {
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean:cache": "rimraf node_modules/.cache",
+    "clean:turbo": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*/\"",
+    "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
+    "format:prettier": "prettier --write . --cache",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
+    "lint:prettier": "prettier --check . --cache",
+    "lint:typescript": "tsc"
+  },
+  "dependencies": {
+    "@docusaurus/preset-classic": "3.2.1",
+    "@docusaurus/types": "3.2.1",
+    "@swc/core": "^1.4.17",
+    "docusaurus-plugin-includes": "^1.1.5",
+    "prism-react-renderer": "^2.3.0",
+    "remark-github-admonitions-to-directives": "^1.0.5",
+    "swc-loader": "^0.2.6"
+  },
+  "devDependencies": {
+    "@incentro-ecx/eslint-config": "workspace:^",
+    "@incentro-ecx/prettier-config": "workspace:^",
+    "@incentro-ecx/typescript-config": "workspace:^",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

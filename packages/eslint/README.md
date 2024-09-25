@@ -20,6 +20,8 @@ To install the package, use the following command:
 pnpm add -D eslint @incentro-ecx/eslint-config
 ```
 
+You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
+
 ## 🪛 Usage
 
 Create an ESLint configuration file and re-export this configuration:
