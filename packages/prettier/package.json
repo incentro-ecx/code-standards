@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-dc/prettier-config",
+  "version": "0.1.0",
+  "description": "A shared Prettier configuration for formatting files.",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./prettier.config.js",
+      "types": "./prettier.config.d.ts"
+    }
+  },
+  "main": "./prettier.config.js",
+  "files": [
+    "prettier.config.js",
+    "prettier.config.d.ts"
+  ],
+  "scripts": {
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean:cache": "rimraf node_modules/.cache",
+    "clean:turbo": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*/\"",
+    "format:prettier": "prettier --write . --cache",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:prettier": "prettier --check . --cache"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
