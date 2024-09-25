@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Docusaurus",
+  "extends": "./base.json",
+
+  "compilerOptions": {
+    "noEmit": true,
+
+    "jsx": "preserve",
+    "lib": ["DOM"],
+
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "verbatimModuleSyntax": false,
+
+    "types": [
+      "node",
+      "@docusaurus/module-type-aliases",
+      "@docusaurus/theme-classic"
+    ]
+  }
+}

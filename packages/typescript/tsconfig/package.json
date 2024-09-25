@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Package",
+  "extends": "./base.json",
+
+  "compilerOptions": {
+    "declaration": true,
+    "sourceMap": true,
+
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    "stripInternal": true
+  }
+}

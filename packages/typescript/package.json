@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-ecx/typescript-config",
+  "version": "0.0.1",
+  "description": "Shared Typescript configurations.",
+  "sideEffects": false,
+  "type": "module",
+  "main": "tsconfig/base.json",
+  "files": [
+    "tsconfig/**"
+  ],
+  "scripts": {
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean:cache": "rimraf node_modules/.cache",
+    "clean:turbo": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*/\"",
+    "format:prettier": "prettier --write . --cache",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:prettier": "prettier --check . --cache"
+  },
+  "dependencies": {
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^20.12.7"
+  },
+  "devDependencies": {
+    "@incentro-ecx/prettier-config": "workspace:^",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
