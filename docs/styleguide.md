@@ -142,7 +142,7 @@ Use:
 
 ## 📘 Typescript
 
-As a basis we follow [Prettier](https://prettier.io/)'s default code style and **we do not diverge from it**. On top of that we have some additional linting rules from various ESLint plugins, which are documented at the [ESLint package](https://incentro-dc.github.io/micro.nova/configs/eslint).
+As a basis we follow [Prettier](https://prettier.io/)'s default code style and **we do not diverge from it**. On top of that we have some additional linting rules from various ESLint plugins, which are documented at the [ESLint package](../packages/eslint/README.md).
 
 Some notable rules:
 
