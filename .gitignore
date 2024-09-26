@@ -7,5 +7,6 @@ node_modules
 # Turbo
 .turbo
 
-# Configuration
+# Configuration and sensitive data
 .env
+.npmrc
