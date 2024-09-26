@@ -17,7 +17,7 @@ Shared [ESLint](https://eslint.org/) configurations for linting files. It enforc
 To install the package, use the following command:
 
 ```bash
-pnpm add -D eslint @incentro-ecx/eslint-config
+pnpm add -D eslint @incentro-dc/eslint-config
 ```
 
 You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
@@ -27,7 +27,7 @@ You will need access to this repository, for more info read [this](../../docs/in
 Create an ESLint configuration file and re-export this configuration:
 
 ```js [eslint.config.js]
-export config from "@incentro-ecx/eslint-config";
+export config from "@incentro-dc/eslint-config";
 
 export default [
   ...config,
@@ -57,7 +57,7 @@ This is the base ESLint configuration for all Docusaurus projects. It extends th
 #### 🪛 Usage
 
 ```js [eslint.config.js]
-import config from "@incentro-ecx/eslint-config/docusaurus";
+import config from "@incentro-dc/eslint-config/docusaurus";
 
 export default [
   ...config,

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/prettier-config",
+  "name": "@incentro-dc/prettier-config",
   "version": "0.0.1",
   "description": "A shared Prettier configuration for formatting files.",
   "sideEffects": false,
@@ -34,6 +34,8 @@
     "rimraf": "^5.0.5"
   },
   "publishConfig": {
-    "access": "restricted"
-  }
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/incentro-dc/code-standards"
 }

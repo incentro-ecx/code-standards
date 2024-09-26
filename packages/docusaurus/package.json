@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/docusaurus-config",
+  "name": "@incentro-dc/docusaurus-config",
   "version": "0.0.1",
   "description": "A shared Docusaurus configuration for building documentation sites.",
   "sideEffects": false,
@@ -34,9 +34,9 @@
     "swc-loader": "^0.2.6"
   },
   "devDependencies": {
-    "@incentro-ecx/eslint-config": "workspace:^",
-    "@incentro-ecx/prettier-config": "workspace:^",
-    "@incentro-ecx/typescript-config": "workspace:^",
+    "@incentro-dc/eslint-config": "workspace:^",
+    "@incentro-dc/prettier-config": "workspace:^",
+    "@incentro-dc/typescript-config": "workspace:^",
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5"
@@ -46,6 +46,8 @@
     "react-dom": ">=18"
   },
   "publishConfig": {
-    "access": "restricted"
-  }
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/incentro-dc/code-standards"
 }

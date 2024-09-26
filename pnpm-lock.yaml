@@ -11,7 +11,7 @@ importers:
       '@changesets/cli':
         specifier: ^2.27.1
         version: 2.27.8
-      '@incentro-ecx/prettier-config':
+      '@incentro-dc/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier
       '@svitejs/changesets-changelog-github-compact':
@@ -60,13 +60,13 @@ importers:
         specifier: ^0.2.6
         version: 0.2.6(@swc/core@1.7.28)(webpack@5.95.0(@swc/core@1.7.28))
     devDependencies:
-      '@incentro-ecx/eslint-config':
+      '@incentro-dc/eslint-config':
         specifier: workspace:^
         version: link:../eslint
-      '@incentro-ecx/prettier-config':
+      '@incentro-dc/prettier-config':
         specifier: workspace:^
         version: link:../prettier
-      '@incentro-ecx/typescript-config':
+      '@incentro-dc/typescript-config':
         specifier: workspace:^
         version: link:../typescript
       eslint:
@@ -115,10 +115,10 @@ importers:
         specifier: ^7.7.1
         version: 7.18.0(eslint@8.57.1)(typescript@5.4.5)
     devDependencies:
-      '@incentro-ecx/prettier-config':
+      '@incentro-dc/prettier-config':
         specifier: workspace:^
         version: link:../prettier
-      '@incentro-ecx/typescript-config':
+      '@incentro-dc/typescript-config':
         specifier: workspace:^
         version: link:../typescript
       '@types/eslint__js':
@@ -165,7 +165,7 @@ importers:
         specifier: ^20.12.7
         version: 20.16.7
     devDependencies:
-      '@incentro-ecx/prettier-config':
+      '@incentro-dc/prettier-config':
         specifier: workspace:^
         version: link:../prettier
       prettier:

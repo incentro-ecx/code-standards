@@ -10,8 +10,5 @@
   "access": "restricted",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "ignore": []
 }
