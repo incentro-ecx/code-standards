@@ -25,6 +25,17 @@ const config: Linter.Config[] = [
     plugins: {
       "eslint-comments": eslintComments,
     },
+    settings: {
+      "import-x/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"],
+      },
+      "import-x/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+        node: true,
+      },
+    },
     languageOptions: {
       parserOptions: {
         sourceType: "module",
