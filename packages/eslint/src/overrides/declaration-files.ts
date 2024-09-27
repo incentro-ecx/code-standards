@@ -7,6 +7,6 @@ export const declarationFilesOverride: Linter.Config = {
   rules: {
     // We can't control the export type of external modules, so we also can't
     // control whether they use default exports or not.
-    "import/no-default-export": "off",
+    "import-x/no-default-export": "off",
   },
 };
