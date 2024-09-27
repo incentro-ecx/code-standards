@@ -11,6 +11,7 @@ import typescript from "typescript-eslint";
 
 import { declarationFilesOverride } from "../overrides/declaration-files.js";
 import { indexFilesOverride } from "../overrides/index-files.js";
+import { fixupPluginRules } from "@eslint/compat";
 
 const typescriptConfigs = typescript.configs.recommended as Linter.Config[];
 
@@ -19,7 +20,7 @@ const config: Linter.Config[] = [
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
-      import: imports,
+      import: fixupPluginRules(imports),
       "eslint-comments": eslintComments,
     },
     settings: {
