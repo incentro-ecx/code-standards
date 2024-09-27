@@ -1,5 +1,11 @@
 # @incentro-dc/eslint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- Add resolver and parser settings for import-x plugin
+
 ## 0.2.0
 
 ### Minor Changes
