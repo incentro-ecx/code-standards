@@ -9,6 +9,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import unicorn from "eslint-plugin-unicorn";
 import typescript from "typescript-eslint";
 
+import { fixupPluginRules } from "@eslint/compat";
 import { declarationFilesOverride } from "../overrides/declaration-files.js";
 import { indexFilesOverride } from "../overrides/index-files.js";
 
@@ -19,7 +20,7 @@ const config: Linter.Config[] = [
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
-      import: imports,
+      import: fixupPluginRules(imports),
       "eslint-comments": eslintComments,
     },
     settings: {

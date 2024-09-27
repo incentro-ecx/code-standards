@@ -3,6 +3,7 @@
   "name": "@incentro-dc/prettier-config",
   "version": "0.0.1",
   "description": "A shared Prettier configuration for formatting files.",
+  "repository": "https://github.com/incentro-dc/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -36,6 +37,5 @@
   "publishConfig": {
     "access": "restricted",
     "registry": "https://npm.pkg.github.com"
-  },
-  "repository": "https://github.com/incentro-dc/code-standards"
+  }
 }
