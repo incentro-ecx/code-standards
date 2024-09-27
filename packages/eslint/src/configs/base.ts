@@ -2,37 +2,28 @@ import javascript from "@eslint/js";
 import type { Linter } from "eslint";
 import prettier from "eslint-config-prettier";
 import eslintComments from "eslint-plugin-eslint-comments";
-import imports from "eslint-plugin-import";
+import imports from "eslint-plugin-import-x";
 import jsxAccessibility from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import unicorn from "eslint-plugin-unicorn";
 import typescript from "typescript-eslint";
 
-import { fixupPluginRules } from "@eslint/compat";
 import { declarationFilesOverride } from "../overrides/declaration-files.js";
 import { indexFilesOverride } from "../overrides/index-files.js";
 
 const typescriptConfigs = typescript.configs.recommended as Linter.Config[];
+const importConfigs = [
+  imports.flatConfigs.recommended,
+  imports.flatConfigs.typescript,
+] as Linter.Config[];
 
 const config: Linter.Config[] = [
   unicorn.configs["flat/recommended"],
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     plugins: {
-      import: fixupPluginRules(imports),
       "eslint-comments": eslintComments,
-    },
-    settings: {
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"],
-      },
-      "import/resolver": {
-        typescript: {
-          alwaysTryTypes: true,
-        },
-        node: true,
-      },
     },
     languageOptions: {
       parserOptions: {
@@ -42,21 +33,20 @@ const config: Linter.Config[] = [
     },
     rules: {
       ...javascript.configs.recommended.rules,
-      ...imports.configs.recommended.rules,
       ...eslintComments.configs.recommended.rules,
 
       // Prevent the common mistake of adding `console.log` in production code.
       "no-console": "error",
 
       // Prefer named exports.
-      "import/prefer-default-export": "off",
-      "import/no-default-export": "error",
+      "import-x/prefer-default-export": "off",
+      "import-x/no-default-export": "error",
 
       // Warn when importing `devDependencies` in production code.
-      "import/no-extraneous-dependencies": "error",
+      "import-x/no-extraneous-dependencies": "error",
 
       // Prevent exporting `var` or `let` variables.
-      "import/no-mutable-exports": "error",
+      "import-x/no-mutable-exports": "error",
 
       // We allow Array#reduce because sometimes it's the most readable syntax.
       "unicorn/no-array-reduce": "off",
@@ -152,6 +142,7 @@ const config: Linter.Config[] = [
     },
   },
   ...typescriptConfigs,
+  ...importConfigs,
   prettier,
   declarationFilesOverride,
   indexFilesOverride,
@@ -159,5 +150,5 @@ const config: Linter.Config[] = [
 
 // REASON: We want to provide this config as a default export to users of this
 // package, as it's a common pattern in the ecosystem of ESLint.
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default config;

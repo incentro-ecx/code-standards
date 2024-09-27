@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@incentro-dc/eslint-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A shared ESLint configuration for linting files.",
   "repository": "https://github.com/incentro-dc/code-standards",
   "sideEffects": false,
@@ -34,12 +34,11 @@
     "lint:prettier": "prettier --check . --cache"
   },
   "dependencies": {
-    "@eslint/compat": "^1.1.1",
     "@eslint/js": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import-x": "^4.3.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
