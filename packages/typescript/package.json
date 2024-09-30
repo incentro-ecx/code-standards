@@ -7,9 +7,6 @@
   "sideEffects": false,
   "type": "module",
   "main": "tsconfig/base.json",
-  "files": [
-    "tsconfig/**"
-  ],
   "scripts": {
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:cache": "rimraf node_modules/.cache",
