@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Base",
-  "extends": "@tsconfig/strictest/tsconfig.json",
+  "extends": "../node_modules/@tsconfig/strictest/tsconfig.json",
 
   "compilerOptions": {
     "allowJs": true,

@@ -1,15 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@incentro-dc/typescript-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Shared Typescript configurations.",
   "repository": "https://github.com/incentro-dc/code-standards",
   "sideEffects": false,
   "type": "module",
   "main": "tsconfig/base.json",
-  "files": [
-    "tsconfig/**"
-  ],
   "scripts": {
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:cache": "rimraf node_modules/.cache",
