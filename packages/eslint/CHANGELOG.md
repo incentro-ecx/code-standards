@@ -1,5 +1,11 @@
 # @incentro-dc/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- Adds some abbrevations to allow in code
+
 ## 0.2.1
 
 ### Patch Changes

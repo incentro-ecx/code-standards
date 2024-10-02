@@ -117,6 +117,22 @@ const config: Linter.Config[] = [
           fixStyle: "separate-type-imports",
         },
       ],
+
+      // We do not want to be too harsh on abbreviations, so we do allow some
+      // of the most normalized abbreviations in programming.
+      "unicorn/prevent-abbreviations": [
+        "error",
+        {
+          allowList: {
+            Prop: true,
+            prop: true,
+            Props: true,
+            props: true,
+            Ref: true,
+            ref: true,
+          },
+        },
+      ],
     },
   },
   {
