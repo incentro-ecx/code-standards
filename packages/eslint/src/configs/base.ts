@@ -130,9 +130,9 @@ const config: Linter.Config[] = [
             props: true,
             Ref: true,
             ref: true,
-          }
-        }
-      ]
+          },
+        },
+      ],
     },
   },
   {
