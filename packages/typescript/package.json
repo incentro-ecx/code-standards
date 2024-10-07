@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@incentro-ecx/typescript-config",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Shared Typescript configurations.",
   "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
