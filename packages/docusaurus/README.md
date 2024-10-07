@@ -9,7 +9,7 @@ A shared Docusaurus configuration for creating documentation sites. It sets some
 To install the package, use the following command:
 
 ```bash
-pnpm add -D prettier @incentro-dc/docusaurus-config
+pnpm add -D prettier @incentro-ecx/docusaurus-config
 ```
 
 You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
@@ -28,7 +28,7 @@ import {
   createConfig,
   type Config,
   type PresetConfig,
-} from "@incentro-dc/docusaurus-config";
+} from "@incentro-ecx/docusaurus-config";
 
 const config: Config = {
   // Docusaurus configuration without defaults

@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-dc/prettier-config",
-  "version": "0.0.1",
+  "name": "@incentro-ecx/prettier-config",
+  "version": "1.0.0",
   "description": "A shared Prettier configuration for formatting files.",
-  "repository": "https://github.com/incentro-dc/code-standards",
+  "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {

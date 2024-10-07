@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-dc/code-standards",
+  "name": "@incentro-ecx/code-standards",
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
@@ -24,13 +24,13 @@
     "lint:prettier": "pnpm run lint:prettier:root && turbo run lint:prettier",
     "lint:prettier:root": "prettier --check *.* --cache",
     "lint:typescript": "turbo run lint:typescript",
-    "prepare": "turbo run build --filter=@incentro-dc/eslint-config",
+    "prepare": "turbo run build --filter=@incentro-ecx/eslint-config",
     "serve": "turbo run serve",
     "start": "turbo run start"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "@incentro-dc/prettier-config": "workspace:*",
+    "@incentro-ecx/prettier-config": "workspace:*",
     "@svitejs/changesets-changelog-github-compact": "^1.1.0",
     "env-cmd": "^10.1.0",
     "prettier": "^3.2.5",

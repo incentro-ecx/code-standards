@@ -26,7 +26,7 @@ export function createConfig(
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
 
-    organizationName: "incentro-dc",
+    organizationName: "incentro-ecx",
 
     ...config,
 
