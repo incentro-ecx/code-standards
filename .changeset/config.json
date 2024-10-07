@@ -2,7 +2,7 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
   "changelog": [
     "@svitejs/changesets-changelog-github-compact",
-    { "repo": "incentro-dc/code-standards" }
+    { "repo": "incentro-ecx/code-standards" }
   ],
   "commit": false,
   "fixed": [],

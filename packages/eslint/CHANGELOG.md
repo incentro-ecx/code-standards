@@ -1,4 +1,4 @@
-# @incentro-dc/eslint-config
+# @incentro-ecx/eslint-config
 
 ## 0.3.0
 

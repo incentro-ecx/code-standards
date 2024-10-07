@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-dc/eslint-config",
+  "name": "@incentro-ecx/eslint-config",
   "version": "0.3.0",
   "description": "A shared ESLint configuration for linting files.",
-  "repository": "https://github.com/incentro-dc/code-standards",
+  "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -47,8 +47,8 @@
     "typescript-eslint": "^7.7.1"
   },
   "devDependencies": {
-    "@incentro-dc/prettier-config": "workspace:^",
-    "@incentro-dc/typescript-config": "workspace:^",
+    "@incentro-ecx/prettier-config": "workspace:^",
+    "@incentro-ecx/typescript-config": "workspace:^",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.12.7",
     "eslint": "^8.57.0",
