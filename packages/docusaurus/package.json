@@ -25,9 +25,9 @@
     "lint:typescript": "tsc"
   },
   "dependencies": {
-    "@docusaurus/preset-classic": "3.2.1",
+    "@docusaurus/preset-classic": "3.6.3",
     "@docusaurus/types": "3.2.1",
-    "@swc/core": "^1.4.17",
+    "@swc/core": "^1.9.3",
     "docusaurus-plugin-includes": "^1.1.5",
     "prism-react-renderer": "^2.3.0",
     "remark-github-admonitions-to-directives": "^1.0.5",
