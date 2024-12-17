@@ -5,4 +5,9 @@ export default [
   {
     ignores: ["dist/**", "*.*"],
   },
+  {
+    rules: {
+      'unicorn/expiring-todo-comments': 'off',
+    },
+  }
 ];
