@@ -1,2 +1,6 @@
 packages:
   - "packages/*"
+
+# Try to install packages locally (from the workspace) before trying to install
+# them from the registry.
+linkWorkspacePackages: true
