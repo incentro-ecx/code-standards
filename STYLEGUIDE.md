@@ -1,13 +1,8 @@
 # Styleguide
 
-![Style is everything](images/style.png)
-
-Style is everything. A consistent code style helps readability and makes it easier to switch between developing various packages.
+A consistent code style helps readability and makes it easier to switch between developing various packages.
 
 _It's also a nice basis to start nerdy discussions._
-
-> [!WARNING]
-> Any derivation of these guidelines should be discussed with the team.
 
 ## 👩‍🎓 Guidelines
 
@@ -143,7 +138,7 @@ Use:
 
 ## 📘 Typescript
 
-As a basis we follow [Prettier](https://prettier.io/)'s default code style and **we do not diverge from it**. On top of that we have some additional linting rules from various ESLint plugins, which are documented at the [ESLint package](../packages/eslint/README.md).
+As a basis we follow [Prettier](https://prettier.io/)'s default code style and **we do not diverge from it**. On top of that we have some additional linting rules from various ESLint plugins, which are documented at the [ESLint package](ttps://incentro-ecx.github.io/code-standards/configs/eslint).
 
 Some notable rules:
 
