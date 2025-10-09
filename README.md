@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">code standards</h1>
+  <h1 align="center">Incentro IC - Code Standards</h1>
   <strong><a href="https://incentro-ecx.github.io/code-standards">Read the docs</a></strong>
   
   <br />
