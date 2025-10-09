@@ -1,5 +1,6 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turbo.build/schema.v2.json",
+  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -18,19 +19,27 @@
       "cache": false
     },
     "format": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": ["@incentro-ic/eslint#build"]
     },
     "format:eslint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": ["@incentro-ic/eslint#build"]
     },
     "format:prettier": {},
     "lint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": ["@incentro-ic/eslint#build"]
     },
     "lint:eslint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": ["@incentro-ic/eslint#build"]
     },
     "lint:prettier": {},
-    "lint:typescript": {}
+    "lint:typescript": {},
+    "serve": {
+      "dependsOn": ["build"],
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["^build"],
+      "persistent": true
+    }
   }
 }
