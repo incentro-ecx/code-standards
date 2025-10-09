@@ -8,8 +8,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "default": "./prettier.config.js",
-      "types": "./prettier.config.d.ts"
+      "types": "./prettier.config.d.ts",
+      "default": "./prettier.config.js"
     }
   },
   "main": "./prettier.config.js",
