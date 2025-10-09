@@ -12,7 +12,7 @@
 
 ## 💫 Introduction
 
-This repository contains shared resources related to the coding standards we use within the Incentro Intelligent Commerce cel. It contains shared configurations for various tools which you can read more about in [the documentation](https://incentro-ecx.github.io/code-standards/configs), as well as a shared [style guide](ttps://incentro-ecx.github.io/code-standards/style-guide).
+This repository contains shared resources related to the coding standards we use within the Incentro Intelligent Commerce cel. It contains shared configurations for various tools which you can read more about in [the documentation](https://incentro-ecx.github.io/code-standards/configs), as well as a shared [style guide](https://incentro-ecx.github.io/code-standards/style-guide).
 
 ## 🙌 Contributing
 
