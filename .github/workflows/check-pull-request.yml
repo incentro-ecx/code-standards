@@ -1,4 +1,4 @@
-name: PR Checks
+name: Check pull request
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -39,5 +39,5 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/install
 
-      - name: Run lint commands
+      - name: Run linters
         run: pnpm lint
