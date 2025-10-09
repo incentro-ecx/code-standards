@@ -54,7 +54,7 @@ The root `package.json` contains a set of scripts you can run, most notably:
 > You might want to run a script for only one package or app. Almost all of the `package.json` scripts support the use of the [`--filter` flag](https://turbo.build/repo/docs/reference/command-line-reference/run#--filter) used by Turborepo:
 >
 > ```bash
-> pnpm lint --filter=@incentro-ecx/prettier-config
+> pnpm lint --filter=@incentro-ic/prettier-config
 > ```
 
 ## 💅 Style Guide

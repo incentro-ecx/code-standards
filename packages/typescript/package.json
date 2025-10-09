@@ -20,7 +20,7 @@
     "@types/node": "^20.12.7"
   },
   "devDependencies": {
-    "@incentro-ecx/prettier-config": "workspace:^",
+    "@incentro-ic/prettier-config": "workspace:^",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5"
   },

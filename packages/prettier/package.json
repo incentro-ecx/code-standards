@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/prettier-config",
-  "version": "1.0.3",
+  "name": "@incentro-ic/prettier-config",
+  "version": "2.0.0",
   "description": "A shared Prettier configuration for formatting files.",
   "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
@@ -27,15 +27,14 @@
     "lint:prettier": "prettier --check . --cache"
   },
   "dependencies": {
-    "prettier-plugin-organize-imports": "^3.2.4",
-    "prettier-plugin-packagejson": "^2.5.0"
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-packagejson": "^2.5.19"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5"
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1"
   },
-  "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com"
+  "peerDependencies": {
+    "prettier": "^3.6.0"
   }
 }
