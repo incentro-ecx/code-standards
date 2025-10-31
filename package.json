@@ -15,6 +15,8 @@
     "clean:cache:root": "rimraf node_modules/.cache",
     "clean:turbo": "turbo run clean:turbo",
     "clean:turbo:root": "rimraf .turbo",
+    "eslint:build": "turbo run @incentro-ic/eslint-config#build --ui stream",
+    "eslint:inspect": "turbo run @incentro-ic/eslint-config#inspect --ui stream",
     "format": "pnpm run \"/^format:.*:root/\" && turbo run format",
     "format:eslint": "turbo run format:eslint",
     "format:prettier": "pnpm run format:prettier:root && turbo run format:prettier",
@@ -24,9 +26,7 @@
     "lint:prettier": "pnpm run lint:prettier:root && turbo run lint:prettier",
     "lint:prettier:root": "prettier --check *.* --cache",
     "lint:typescript": "turbo run lint:typescript",
-    "prepare": "turbo run build --filter=@incentro-ecx/eslint-config",
-    "serve": "turbo run serve",
-    "start": "turbo run start"
+    "prepare": "pnpm run eslint:build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.6",

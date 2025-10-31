@@ -1,9 +1,9 @@
-declare module "eslint-plugin-unicorn" {
+declare module "eslint-plugin-import" {
   import type { Linter } from "eslint";
 
   const plugin: {
-    configs: {
-      "flat/recommended": Linter.Config;
+    flatConfigs: {
+      recommended: Linter.Config;
     };
   };
 

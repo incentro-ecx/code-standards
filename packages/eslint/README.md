@@ -1,4 +1,4 @@
-# Incentro ECX - ESLint
+# Incentro IC - Code Standards - ESLint
 
 ## 💫 Introduction
 
@@ -10,24 +10,24 @@ Shared [ESLint](https://eslint.org/) configurations for linting files. It enforc
 - [`eslint-plugin-react`](https://github.com/jsx-eslint/eslint-plugin-react) - Checks around React components.
 - [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) - Checks around React hooks.
 - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) - Accessibility checks for JSX elements.
-- [`eslint-plugin-eslint-comments`](https://github.com/mysticatea/eslint-plugin-eslint-comments) - Checks around comments disabling ESLint rules.
+- [`@eslint-community/eslint-plugin-eslint-comments`](https://github.com/eslint-community/eslint-plugin-eslint-comments) - Checks around comments disabling ESLint rules.
+- [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest) - Checks around Vitest test files.
+- [`@cspell/eslint-plugin](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) - Checks spelling and grammar.
 
 ## 💾 Installation
 
 To install the package, use the following command:
 
 ```bash
-pnpm add -D eslint @incentro-ecx/eslint-config
+pnpm add -D eslint @incentro-ic/eslint-config
 ```
-
-You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
 
 ## 🪛 Usage
 
 Create an ESLint configuration file and re-export this configuration:
 
 ```js [eslint.config.js]
-export config from "@incentro-ecx/eslint-config";
+export config from "@incentro-ic/eslint-config";
 
 export default [
   ...config,
@@ -39,30 +39,6 @@ export default [
       // Files in the root directory
       "*.*",
     ],
-  },
-];
-```
-
-> [!NOTE]
-> This example uses the new [ESLint flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new) format.
-
-## ⚙️ Configs
-
-Next to a base configuration, we also provide a set of shared configurations for different types of projects:
-
-### 🦖 Docusaurus
-
-This is the base ESLint configuration for all Docusaurus projects. It extends the base configuration but turns off some rules that are not applicable to Docusaurus projects.
-
-#### 🪛 Usage
-
-```js [eslint.config.js]
-import config from "@incentro-ecx/eslint-config/docusaurus";
-
-export default [
-  ...config,
-  {
-    ignores: ["dist/**", ".docusaurus", "*.*"],
   },
 ];
 ```

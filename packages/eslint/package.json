@@ -1,23 +1,20 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/eslint-config",
+  "name": "@incentro-ic/eslint-config",
   "version": "1.0.3",
   "description": "A shared ESLint configuration for linting files.",
-  "repository": "https://github.com/incentro-ecx/code-standards",
+  "repository": "https://github.com/incentro-ic/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./docusaurus": {
-      "default": "./dist/configs/docusaurus.js",
-      "types": "./dist/configs/docusaurus.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "main": "dist/index.js",
   "files": [
+    "src/**",
     "dist/**"
   ],
   "scripts": {
@@ -29,32 +26,33 @@
     "format": "pnpm run \"/^format:.*/\"",
     "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
     "format:prettier": "prettier --write . --cache",
+    "inspect": "eslint --inspect-config",
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
     "lint:prettier": "prettier --check . --cache"
   },
   "dependencies": {
-    "@eslint/js": "^9.16.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import-x": "^4.3.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.1.0",
-    "typescript-eslint": "^7.7.1"
+    "@cspell/eslint-plugin": "^9.2.2",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.38.0",
+    "@vitest/eslint-plugin": "^1.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "typescript-eslint": "^8.46.2"
   },
   "devDependencies": {
     "@incentro-ecx/typescript-config": "workspace:^",
     "@incentro-ic/prettier-config": "workspace:^",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.7",
-    "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "typescript": "~5.4.5"
+    "@types/node": "^22.18.8",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "restricted",
