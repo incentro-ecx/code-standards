@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base",
+
+  // We extend from the strictest base config. We'd rather reduce strictness
+  // than introduce strictness later.
+  "extends": "@tsconfig/strictest",
+
+  "compilerOptions": {
+    // If for some reason we can't use Typescript, we allow Javascript files to
+    // also be typechecked by Typescript.
+    "allowJs": true,
+
+    // Make sure we use incremental compilations and typechecking to speed up
+    // the development experience.
+    "incremental": true,
+
+    // Allow JSON files to be imported as modules.
+    "resolveJsonModule": true,
+
+    // Force being explicit about type imports to avoid accidental side
+    // effects.
+    "verbatimModuleSyntax": true,
+
+    // Allow the use of decorators.
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    // We don't distinguish between properties which are optional and
+    // properties which accept undefined.
+    "exactOptionalPropertyTypes": false,
+
+    // This setting is very strict, and would prohibit accessing properties of
+    // objects with an index signature. Instead, we chose to trust the index
+    // signature.
+    "noPropertyAccessFromIndexSignature": false
+  }
+}

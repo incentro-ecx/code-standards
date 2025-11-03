@@ -1,12 +1,22 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/typescript-config",
+  "name": "@incentro-ic/typescript-config",
   "version": "1.0.1",
   "description": "Shared Typescript configurations.",
-  "repository": "https://github.com/incentro-ecx/code-standards",
+  "repository": "https://github.com/incentro-ic/code-standards",
   "sideEffects": false,
   "type": "module",
-  "main": "tsconfig/base.json",
+  "exports": {
+    ".": "./src/base/tsconfig.json",
+    "./package": "./src/package/tsconfig.json",
+    "./package-browser": "./src/package-browser/tsconfig.json",
+    "./package-node": "./src/package-node/tsconfig.json",
+    "./package-react": "./src/package-react/tsconfig.json"
+  },
+  "main": "./src/base/tsconfig.json",
+  "files": [
+    "src/**"
+  ],
   "scripts": {
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:cache": "rimraf node_modules/.cache",
@@ -17,15 +27,12 @@
     "lint:prettier": "prettier --check . --cache"
   },
   "dependencies": {
-    "@types/node": "^20.12.7"
+    "@tsconfig/strictest": "^2.0.7",
+    "@types/node": "^22.19.0"
   },
   "devDependencies": {
     "@incentro-ic/prettier-config": "workspace:^",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5"
-  },
-  "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com"
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Package",
+  "extends": "../base/tsconfig.json",
+
+  "compilerOptions": {
+    // When building a package, we want to generate declaration files and
+    // source maps for both the source code and the declaration files.
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    // When developing packages which can potentially be used in both Node.js
+    // and browser environments, we want to stick to a module resolution
+    // algorithm and module syntax that works in both environments without
+    // requiring a bundler.
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+
+    // When building and publishing a package, we want to be able to prevent
+    // the import of exports marked as internal.
+    "stripInternal": true
+  }
+}

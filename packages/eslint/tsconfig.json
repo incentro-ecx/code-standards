@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@incentro-ecx/typescript-config/tsconfig/package-node.json",
+  "extends": "@incentro-ic/typescript-config/package-node",
 
   "include": ["src/**/*.ts", "src/**/*.js"],
 

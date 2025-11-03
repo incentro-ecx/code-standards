@@ -1,12 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Package - React",
-  "extends": "./package.json",
+  "extends": "../package-browser/tsconfig.json",
 
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "es2021"],
-    "target": "es2021",
-
+    // For a package targeting React, enable JSX support.
     "jsx": "react-jsx"
   }
 }

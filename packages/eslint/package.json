@@ -46,8 +46,8 @@
     "typescript-eslint": "^8.46.2"
   },
   "devDependencies": {
-    "@incentro-ecx/typescript-config": "workspace:^",
     "@incentro-ic/prettier-config": "workspace:^",
+    "@incentro-ic/typescript-config": "workspace:^",
     "@types/node": "^22.18.8",
     "eslint": "^9.38.0",
     "prettier": "^3.6.2",
