@@ -12,7 +12,7 @@ A shared [Prettier](https://prettier.io/) configuration for formatting files. We
 To install the package, use the following command:
 
 ```bash
-pnpm add -D prettier @incentro-ic/prettier-config
+pnpm add -D prettier @incentro-ic/config-prettier
 ```
 
 ## 🪛 Usage
@@ -20,7 +20,7 @@ pnpm add -D prettier @incentro-ic/prettier-config
 Create a Prettier configuration file and re-export this configuration:
 
 ```js [prettier.config.js]
-export { default } from "@incentro-ic/prettier-config";
+export { default } from "@incentro-ic/config-prettier";
 ```
 
 Then, add a script to your `package.json` file to run Prettier:

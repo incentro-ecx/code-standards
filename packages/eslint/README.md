@@ -19,7 +19,7 @@ Shared [ESLint](https://eslint.org/) configurations for linting files. It enforc
 To install the package, use the following command:
 
 ```bash
-pnpm add -D eslint @incentro-ic/eslint-config
+pnpm add -D eslint @incentro-ic/config-eslint
 ```
 
 ## 🪛 Usage
@@ -27,7 +27,7 @@ pnpm add -D eslint @incentro-ic/eslint-config
 Create an ESLint configuration file and re-export this configuration:
 
 ```js [eslint.config.js]
-export config from "@incentro-ic/eslint-config";
+export config from "@incentro-ic/config-eslint";
 
 export default [
   ...config,

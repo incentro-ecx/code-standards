@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ic/typescript-config",
+  "name": "@incentro-ic/config-typescript",
   "version": "1.0.1",
   "description": "Shared Typescript configurations.",
   "repository": "https://github.com/incentro-ic/code-standards",
@@ -31,7 +31,7 @@
     "@types/node": "^24.10.0"
   },
   "devDependencies": {
-    "@incentro-ic/prettier-config": "workspace:^",
+    "@incentro-ic/config-prettier": "workspace:^",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0"
   }

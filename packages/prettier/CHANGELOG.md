@@ -1,4 +1,4 @@
-# @incentro-ic/prettier-config
+# @incentro-ic/config-prettier
 
 ## 1.0.3
 

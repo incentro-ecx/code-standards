@@ -1,4 +1,4 @@
-# @incentro-ic/eslint-config
+# @incentro-ic/config-eslint
 
 ## 1.0.3
 
