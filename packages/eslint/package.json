@@ -53,9 +53,5 @@
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "typescript": "^5.9.3"
-  },
-  "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com"
   }
 }
