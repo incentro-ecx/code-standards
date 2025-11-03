@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@tsconfig/strictest": "^2.0.7",
-    "@types/node": "^22.19.0"
+    "@types/node": "^24.10.0"
   },
   "devDependencies": {
     "@incentro-ic/prettier-config": "workspace:^",

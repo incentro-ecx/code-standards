@@ -4,14 +4,20 @@
   "extends": "../package/tsconfig.json",
 
   "compilerOptions": {
-    // When targeting Node.js version 22 and above, we know the following
+    // When targeting Node.js version 24 and above, we know the following
     // features are available without polyfills, so we can include the built-in
     // Typescript types for them.
     // Sources:
-    //   - https://github.com/tsconfig/bases/blob/main/bases/node22.json
+    //   - https://github.com/tsconfig/bases/blob/main/bases/node24.json
     //   - https://node.green/#ES2024
     "target": "ES2024",
-    "lib": ["ES2024", "ESNext.Array", "ESNext.Collection", "ESNext.Iterator"],
+    "lib": [
+      "ES2024",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator",
+      "ESNext.Promise"
+    ],
     "types": ["node"]
   }
 }
