@@ -16,7 +16,4 @@ runs:
 
     - name: Install dependencies
       shell: bash
-
-      # Don't run scripts to prevent a malicious package from stealing tokens
-      # or doing other harmful things.
-      run: pnpm install --ignore-scripts
+      run: pnpm install
