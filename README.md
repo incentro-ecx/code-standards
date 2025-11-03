@@ -12,7 +12,15 @@
 
 ## 💫 Introduction
 
-This repository contains shared resources related to the coding standards we use within the Incentro Intelligent Commerce cel. It contains shared configurations for various tools which you can read more about in [the documentation](https://incentro-ecx.github.io/code-standards/configs), as well as a shared [style guide](https://incentro-ecx.github.io/code-standards/style-guide).
+This repository contains shared resources related to the coding standards we use within [the Incentro Intelligent Commerce cel](https://github.com/incentro-ecx). It contains shared configurations for various tools which you can read more about in [the documentation](https://incentro-ecx.github.io/code-standards/configs), as well as a shared [style guide](https://incentro-ecx.github.io/code-standards/style-guide).
+
+## ⚙️ Configs
+
+This repository publishes a set of configuration files shared by projects within the Incentro Intelligent Commerce cel. We published shared configurations for:
+
+- [ESLint](https://eslint.org/) - [`@incentro-ic/config-eslint`](./packages/eslint/README.md)
+- [Prettier](https://prettier.io/) - [`@incentro-ic/config-prettier`](./packages/prettier/README.md)
+- [Typescript](https://www.typescriptlang.org/) - [`@incentro-ic/config-typescript`](./packages/typescript/README.md)
 
 ## 🙌 Contributing
 
