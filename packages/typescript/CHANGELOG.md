@@ -1,4 +1,4 @@
-# @incentro-ecx/typescript-config
+# @incentro-ic/typescript-config
 
 ## 1.0.1
 

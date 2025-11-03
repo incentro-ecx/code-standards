@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/code-standards",
+  "name": "@incentro-ic/code-standards-root",
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
