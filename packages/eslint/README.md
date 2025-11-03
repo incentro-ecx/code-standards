@@ -42,3 +42,16 @@ export default [
   },
 ];
 ```
+
+### ✏️ Adding spell checking
+
+The ESLint config uses [an ESLint plugin](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) for [CSpell](https://cspell.org/). If it detects [a CSpell config file](https://cspell.org/docs/Configuration) it will use that file to spell check the codebase. Example:
+
+```json [cspell.config.json]
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "words": ["incentro"]
+}
+```
