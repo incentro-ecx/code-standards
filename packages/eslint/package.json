@@ -48,7 +48,7 @@
   "devDependencies": {
     "@incentro-ic/prettier-config": "workspace:^",
     "@incentro-ic/typescript-config": "workspace:^",
-    "@types/node": "^22.18.8",
+    "@types/node": "^22.19.0",
     "eslint": "^9.38.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
