@@ -3,7 +3,7 @@
   "name": "@incentro-ic/config-eslint",
   "version": "1.0.3",
   "description": "A shared ESLint configuration for linting files.",
-  "repository": "https://github.com/incentro-ic/code-standards",
+  "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {

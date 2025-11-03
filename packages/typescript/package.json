@@ -3,7 +3,7 @@
   "name": "@incentro-ic/config-typescript",
   "version": "1.0.1",
   "description": "Shared Typescript configurations.",
-  "repository": "https://github.com/incentro-ic/code-standards",
+  "repository": "https://github.com/incentro-ecx/code-standards",
   "sideEffects": false,
   "type": "module",
   "exports": {
