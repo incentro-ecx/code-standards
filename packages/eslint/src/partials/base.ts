@@ -46,6 +46,10 @@ export const baseConfigs: Linter.Config[] = [
       // This conflicts with the requirement from Typescript to enforce the use
       // of objects when spreading. -> ts(2698)
       "unicorn/no-useless-fallback-in-spread": "off",
+
+      // We allow the use of expiring TODO comments, but we don't ever want
+      // CI / CD pipelines to start failing because it's a different day.
+      "unicorn/expiring-todo-comments": "off",
     },
   },
 ];
