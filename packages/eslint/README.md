@@ -12,7 +12,7 @@ Shared [ESLint](https://eslint.org/) configuration for linting files. It enforce
 - [`eslint-plugin-jsx-a11y`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) - Accessibility checks for JSX elements.
 - [`@eslint-community/eslint-plugin-eslint-comments`](https://github.com/eslint-community/eslint-plugin-eslint-comments) - Checks around comments disabling ESLint rules.
 - [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest) - Checks around Vitest test files.
-- [`@cspell/eslint-plugin](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) - Checks spelling and grammar.
+- [`@cspell/eslint-plugin`](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) - Checks spelling and grammar.
 
 ## 💾 Installation
 
