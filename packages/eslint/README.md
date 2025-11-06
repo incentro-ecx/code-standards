@@ -27,9 +27,10 @@ pnpm add -D eslint @incentro-ic/config-eslint
 Create an ESLint configuration file and re-export this configuration:
 
 ```js [eslint.config.js]
-export config from "@incentro-ic/config-eslint";
+import config from "@incentro-ic/config-eslint";
+import { defineConfig } from "eslint/config";
 
-export default [
+export default defineConfig([
   ...config,
   {
     ignores: [
@@ -40,7 +41,7 @@ export default [
       "*.*",
     ],
   },
-];
+]);
 ```
 
 ### ✏️ Adding spell checking

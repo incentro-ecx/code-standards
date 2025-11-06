@@ -1,6 +1,7 @@
+import { defineConfig } from "eslint/config";
 import config from "./dist/index.js";
 
-export default [
+export default defineConfig([
   ...config,
   {
     name: "ignore-dist-and-root",
@@ -14,4 +15,4 @@ export default [
       "import/no-default-export": "off",
     },
   },
-];
+]);
