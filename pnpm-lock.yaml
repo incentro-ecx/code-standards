@@ -11,6 +11,9 @@ importers:
       '@changesets/cli':
         specifier: ^2.29.6
         version: 2.29.7(@types/node@24.10.0)
+      '@incentro-ic/config-cspell':
+        specifier: workspace:^
+        version: link:packages/cspell
       '@incentro-ic/config-prettier':
         specifier: workspace:*
         version: link:packages/prettier
@@ -29,6 +32,34 @@ importers:
       turbo:
         specifier: ^2.6.0
         version: 2.6.0
+
+  packages/cspell:
+    dependencies:
+      '@cspell/cspell-types':
+        specifier: ^9.3.0
+        version: 9.3.0
+    devDependencies:
+      '@incentro-ic/config-eslint':
+        specifier: workspace:^
+        version: link:../eslint
+      '@incentro-ic/config-prettier':
+        specifier: workspace:^
+        version: link:../prettier
+      '@incentro-ic/config-typescript':
+        specifier: workspace:^
+        version: link:../typescript
+      eslint:
+        specifier: ^9.39.0
+        version: 9.39.0
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
+      rimraf:
+        specifier: ^6.1.0
+        version: 6.1.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/eslint:
     dependencies:
@@ -284,6 +315,10 @@ packages:
 
   '@cspell/cspell-types@9.2.2':
     resolution: {integrity: sha512-/1dRFQ3sEY9Yo+f3w0A8MFJ0BOapQc1uFjlMF19c3uoD/e4PpNLpL1qXY4FeLWKDk1D9VT8SL93J+lIwEi5bvg==}
+    engines: {node: '>=20'}
+
+  '@cspell/cspell-types@9.3.0':
+    resolution: {integrity: sha512-WN3R4nqQ7BEgS8UEoPIwNBRuSFT/8GImqXmlx7EHmzBAhevWjF3IDF+OEtokRJ95qik6a4xqJJTJgi624UxDFg==}
     engines: {node: '>=20'}
 
   '@cspell/dict-ada@4.1.1':
@@ -2972,6 +3007,8 @@ snapshots:
   '@cspell/cspell-service-bus@9.2.2': {}
 
   '@cspell/cspell-types@9.2.2': {}
+
+  '@cspell/cspell-types@9.3.0': {}
 
   '@cspell/dict-ada@4.1.1': {}
 

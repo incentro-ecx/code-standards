@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@incentro-ic/config-cspell",
+  "version": "0.0.0",
+  "description": "Shared CSpell configurations.",
+  "repository": "https://github.com/incentro-ecx/code-standards",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "files": [
+    "src/**",
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean:build": "rimraf dist",
+    "clean:cache": "rimraf node_modules/.cache",
+    "clean:turbo": "rimraf .turbo",
+    "format": "pnpm run \"/^format:.*/\"",
+    "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
+    "format:prettier": "prettier --write . --cache",
+    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
+    "lint:prettier": "prettier --check . --cache"
+  },
+  "dependencies": {
+    "@cspell/cspell-types": "^9.3.0"
+  },
+  "devDependencies": {
+    "@incentro-ic/config-eslint": "workspace:^",
+    "@incentro-ic/config-prettier": "workspace:^",
+    "@incentro-ic/config-typescript": "workspace:^",
+    "eslint": "^9.39.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.0",
+    "typescript": "^5.9.3"
+  }
+}
