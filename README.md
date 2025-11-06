@@ -18,6 +18,7 @@ This repository contains shared resources related to the coding standards we use
 
 This repository publishes a set of configuration files shared by projects within the Incentro Intelligent Commerce cel. We published shared configurations for:
 
+- [Cspell](https://cspell.org/) - [`@incentro-ic/config-cspell`](./packages/cspell/README.md)
 - [ESLint](https://eslint.org/) - [`@incentro-ic/config-eslint`](./packages/eslint/README.md)
 - [Prettier](https://prettier.io/) - [`@incentro-ic/config-prettier`](./packages/prettier/README.md)
 - [Typescript](https://www.typescriptlang.org/) - [`@incentro-ic/config-typescript`](./packages/typescript/README.md)
