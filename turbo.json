@@ -19,17 +19,17 @@
       "cache": false
     },
     "format": {
-      "dependsOn": ["@incentro-ic/eslint#build"]
+      "dependsOn": ["@incentro-ic/config-eslint#build"]
     },
     "format:eslint": {
-      "dependsOn": ["@incentro-ic/eslint#build"]
+      "dependsOn": ["@incentro-ic/config-eslint#build"]
     },
     "format:prettier": {},
     "lint": {
-      "dependsOn": ["@incentro-ic/eslint#build"]
+      "dependsOn": ["@incentro-ic/config-eslint#build"]
     },
     "lint:eslint": {
-      "dependsOn": ["@incentro-ic/eslint#build"]
+      "dependsOn": ["@incentro-ic/config-eslint#build"]
     },
     "lint:prettier": {},
     "lint:typescript": {},
