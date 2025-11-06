@@ -49,7 +49,7 @@ This is the base Typescript configuration that is applicable to all projects. Th
 
 ### 📦 Package
 
-This is the base Typescript configuration for all projects that are meant to be published as a package and do not specifically target the browser or a Node.js environment. It extends [the base configuration](#-base) and adds settings that are related to the output of the TypeScript compiler.
+This is the base Typescript configuration for all projects that are meant to be published as a package and do not specifically target the browser or a Node.js environment. It extends [the base configuration](#-base) and adds settings that are related to the output of the Typescript compiler.
 
 #### 🪛 Usage
 

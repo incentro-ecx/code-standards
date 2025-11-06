@@ -128,13 +128,13 @@ _Version 0.3.2 to 0.3.7 were published with errors and should not be used._
 
 ### Patch Changes
 
-- Turn of `unicorn/prefer-event-target` rule in favor of NodeJS's EventEmitter ([#10](https://github.com/incentro-ecx/micro.nova/pull/10))
+- Turn off `unicorn/prefer-event-target` rule in favor of NodeJS's EventEmitter ([#10](https://github.com/incentro-ecx/micro.nova/pull/10))
 
 ## 0.2.0
 
 ### Minor Changes
 
-- Disabled `unicorn/no-useless-undefined` rule as it conflicts with TypeScript settings around strict use of `undefined`. ([#9](https://github.com/incentro-ecx/micro.nova/pull/9))
+- Disabled `unicorn/no-useless-undefined` rule as it conflicts with Typescript settings around strict use of `undefined`. ([#9](https://github.com/incentro-ecx/micro.nova/pull/9))
 
 ## 0.1.0
 

@@ -32,7 +32,7 @@ export const baseConfigs: Linter.Config[] = [
       // ❤️ null
       "unicorn/no-null": "off",
 
-      // This conflicts with TypeScript settings around strict undefined
+      // This conflicts with Typescript settings around strict undefined
       // checks.
       "unicorn/no-useless-undefined": "off",
 
