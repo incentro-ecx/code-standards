@@ -28,7 +28,8 @@
     "format:prettier": "prettier --write . --cache",
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
-    "lint:prettier": "prettier --check . --cache"
+    "lint:prettier": "prettier --check . --cache",
+    "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
     "@cspell/cspell-types": "^9.3.0"
