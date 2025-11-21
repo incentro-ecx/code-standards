@@ -2,8 +2,12 @@ import type { Linter } from "eslint";
 import jsxAccessibility from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import { JSX_FILES_GLOB } from "../globs.js";
 
-const REACT_FILES_GLOB = ["**/*.{jsx,tsx}"];
+export const REACT_ABBREVIATION_REPLACEMENTS = {
+  // Allow using "props" in React codebases, as it's so common.
+  props: false,
+};
 
 export const reactConfigs: Linter.Config[] = [
   {
@@ -13,7 +17,7 @@ export const reactConfigs: Linter.Config[] = [
   },
 
   {
-    files: REACT_FILES_GLOB,
+    files: JSX_FILES_GLOB,
     ...jsxAccessibility.flatConfigs.recommended,
   },
 
@@ -22,14 +26,14 @@ export const reactConfigs: Linter.Config[] = [
     name: "react/jsx-runtime",
 
     // Only run on files that use JSX or TSX syntax
-    files: REACT_FILES_GLOB,
+    files: JSX_FILES_GLOB,
 
     ...react.configs.flat["jsx-runtime"],
   },
 
   {
     name: "incentro-ic/react",
-    files: REACT_FILES_GLOB,
+    files: JSX_FILES_GLOB,
     rules: {
       // When using React's memo we do want to allow named functions because
       // they will automatically show up with component names in the debug
@@ -38,11 +42,11 @@ export const reactConfigs: Linter.Config[] = [
 
       // Enforce components to be small atoms by limiting their JSX component
       // depth.
-      "react/jsx-max-depth": [
-        "warn",
-        {
-          max: 6,
-        },
+      "react/jsx-max-depth": ["warn", { max: 6 }],
+
+      "unicorn/prevent-abbreviations": [
+        "error",
+        { replacements: REACT_ABBREVIATION_REPLACEMENTS },
       ],
     },
   },

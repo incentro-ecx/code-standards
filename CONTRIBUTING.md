@@ -51,6 +51,7 @@ The root `package.json` contains a set of scripts you can run, most notably:
 - `eslint:inspect` - Start the [ESLint Config Inspector](https://github.com/eslint/config-inspector) for the ESLint config.
 
 > [!TIP]
+>
 > You might want to run a script for only one package or app. Almost all of the `package.json` scripts support the use of the [`--filter` flag](https://turbo.build/repo/docs/reference/command-line-reference/run#--filter) used by Turborepo:
 >
 > ```bash
@@ -59,7 +60,7 @@ The root `package.json` contains a set of scripts you can run, most notably:
 
 ## 💅 Style Guide
 
-The style guide can be found [here](./STYLEGUIDE.md).
+The style guide can be found [here](./STYLE-GUIDE.md).
 
 ## 🚀 Versioning & Releasing
 
@@ -80,6 +81,7 @@ pnpm changeset:add
 This command will guide you through a menu where you can select the affected packages and write a message to add to the changelog.
 
 > [!NOTE]
+>
 > The [Changeset Bot](https://github.com/apps/changeset-bot) will warn you when you haven't added a changeset to your PR.
 
 ### 🚢 Releasing
@@ -133,6 +135,7 @@ pnpm changeset:publish --otp=<token>
 _The `--otp` flag is used to provide NPM with a [one-time password](https://docs.npmjs.com/about-two-factor-authentication)._
 
 > [!IMPORTANT]
+>
 > This command assumes the last is the release commit. You should not commit any changes between running the version and publish command.
 
 This should publish the packages to NPM, update the changelog and create Git tags. To push the tags to Github run:

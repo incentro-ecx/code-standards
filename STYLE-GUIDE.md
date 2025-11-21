@@ -1,4 +1,4 @@
-# Styleguide
+# Style Guide
 
 A consistent code style helps readability and makes it easier to switch between developing various packages.
 
@@ -10,7 +10,7 @@ We have some general guidelines we adhere by:
 
 - **DRY** - **D**on't **R**epeat **Y**ourself. If you see yourself copying and pasting code, check if there's room for a shared utility method / component / service.
 - **KISS** - **K**eep **I**t **S**imple and **S**tupid. Don't overcomplicate things. Try to make your code as simple and understandable as possible.
-- **SoC** - **S**eparation **o**f **C**oncerns. Structure your code into small chunks that have their own responsibilty. For example: try to remove logic from your presentation layer, into the the API or logic components / hooks.
+- **SoC** - **S**eparation **o**f **C**oncerns. Structure your code into small chunks that have their own responsibility. For example: try to remove logic from your presentation layer, into the the API or logic components / hooks.
 - **The Boy Scout Rule** - We leave our code better than we found it. See something that's unreadable or undocumented? Refactor it!
 - **Do refactor** - Stress and deadlines aren't valid reasons to merge a PR (except for hotfixes). If you find something that should be refactored, do it now.
 
@@ -192,7 +192,7 @@ We use the [Apollo naming conventions](https://www.apollographql.com/docs/techno
 
 ## 🖕 Diverging from linting rules
 
-If you have to diverge from linting rules, **disable the rule for one line only**. Also, add a small comment, starting with `REASON: ` that explains the reason you have to disable this comment.
+If you have to diverge from linting rules, **disable the rule for one line only**. Also, add a small comment, starting with `REASON:` that explains the reason you have to disable this comment.
 
 ```ts
 // REASON: ESLint uses default exports for its config.

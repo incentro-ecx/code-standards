@@ -16,7 +16,7 @@ pnpm add -D @incentro-ic/config-cspell
 
 Create an CSPell configuration file and re-export this configuration:
 
-```js [cspell.config.js]
+```js filename="cspell.config.js"
 export { default } from "@incentro-ic/config-cspell";
 ```
 
@@ -26,7 +26,7 @@ By default the configuration allows for the use of the word "incentro", as well 
 
 If you want to customize the configuration, be sure to spread the existing values in the config to merge them:
 
-```js [cspell.config.js]
+```js filename="cspell.config.js"
 import config from "@incentro-ic/config-cspell";
 
 export default {

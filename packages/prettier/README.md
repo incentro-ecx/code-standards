@@ -19,13 +19,13 @@ pnpm add -D prettier @incentro-ic/config-prettier
 
 Create a Prettier configuration file and re-export this configuration:
 
-```js [prettier.config.js]
+```js filename="prettier.config.js"
 export { default } from "@incentro-ic/config-prettier";
 ```
 
 Then, add a script to your `package.json` file to run Prettier:
 
-```json [package.json]
+```json filename="package.json"
 {
   "scripts": {
     "format:prettier": "prettier --write . --cache",

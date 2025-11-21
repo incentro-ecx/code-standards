@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@incentro-ic/config-eslint",
   "version": "1.0.3",
-  "description": "A shared ESLint configuration for linting files.",
+  "description": "Shared ESLint configurations for linting files.",
   "repository": "https://github.com/incentro-ecx/code-standards",
   "license": "Unlicense",
   "sideEffects": false,
@@ -11,6 +11,14 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "default": "./dist/next.js"
+    },
+    "./nextra": {
+      "types": "./dist/nextra.d.ts",
+      "default": "./dist/nextra.js"
     }
   },
   "main": "dist/index.js",
@@ -37,6 +45,7 @@
     "@cspell/eslint-plugin": "^9.3.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/js": "^9.39.1",
+    "@next/eslint-plugin-next": "^16.0.1",
     "@vitest/eslint-plugin": "^1.4.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",

@@ -1,25 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ic/config-cspell",
-  "version": "0.0.0",
-  "description": "A shared CSpell configuration for spell checking.",
-  "repository": "https://github.com/incentro-ecx/code-standards",
+  "name": "@incentro-ic/docs",
+  "private": true,
   "license": "Unlicense",
-  "sideEffects": false,
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
-  "main": "dist/index.js",
-  "files": [
-    "src/**",
-    "dist/**"
-  ],
   "scripts": {
-    "build": "tsc",
+    "build": "next build",
     "clean": "pnpm run \"/^clean:.*/\"",
     "clean:build": "rimraf dist",
     "clean:cache": "rimraf node_modules/.cache",
@@ -30,18 +16,31 @@
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
     "lint:prettier": "prettier --check . --cache",
-    "lint:typescript": "tsc --noEmit"
+    "lint:typescript": "tsc --noEmit",
+    "serve": "next start",
+    "start": "next dev"
   },
   "dependencies": {
-    "@cspell/cspell-types": "^9.3.0"
+    "@heroicons/react": "^2.2.0",
+    "@icons-pack/react-simple-icons": "^13.8.0",
+    "next": "^16.0.1",
+    "nextra": "^4.6.0",
+    "nextra-theme-docs": "^4.6.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@incentro-ic/config-eslint": "workspace:^",
     "@incentro-ic/config-prettier": "workspace:^",
     "@incentro-ic/config-typescript": "workspace:^",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "^19.2.2",
     "eslint": "^9.39.1",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
     "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }

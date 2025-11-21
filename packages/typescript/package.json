@@ -9,6 +9,7 @@
   "type": "module",
   "exports": {
     ".": "./src/base/tsconfig.json",
+    "./app-next": "./src/app-next/tsconfig.json",
     "./package": "./src/package/tsconfig.json",
     "./package-browser": "./src/package-browser/tsconfig.json",
     "./package-node": "./src/package-node/tsconfig.json",

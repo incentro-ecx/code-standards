@@ -1,0 +1,78 @@
+---
+sidebar: false
+---
+
+import { Cards } from "nextra/components";
+import { Cog8ToothIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { DocumentCheckIcon } from "@heroicons/react/24/solid";
+import {
+  SiPrettier,
+  SiEslint,
+  SiTypescript,
+} from "@icons-pack/react-simple-icons";
+
+<div
+  style={{
+    display: "flex",
+    gap: "24px",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <img
+    src="/incentro-circle.svg"
+    style={{
+      display: "inline",
+      width: "40px",
+      height: "40px",
+      marginTop: "24px",
+      marginBottom: "16px",
+    }}
+  />
+  # Incentro IC - Code Standards
+</div>
+
+<div align="center">
+  <p>
+    This project contains shared resources related to the coding standards we
+    use within [the Incentro Intelligent Commerce
+    cel](https://github.com/incentro-ecx). It contains [shared
+    configurations](./configs/) for various tools, as well as a shared [style
+    guide](./style-guide).
+  </p>
+</div>
+
+<br />
+
+<Cards.Card
+  arrow
+  href="./style-guide"
+  icon={<SparklesIcon />}
+  title="Read the Style Guide"
+/>
+
+<br />
+
+<div
+  style={{
+    display: "flex",
+    gap: "12px",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  <Cog8ToothIcon style={{ width: "32px", marginTop: "38px" }} />
+  ## Shared Configurations
+</div>
+
+<Cards>
+  <Cards.Card
+    href="./configs/cspell"
+    icon={<DocumentCheckIcon />}
+    title="CSpell"
+  />
+
+  <Cards.Card href="./configs/eslint" icon={<SiEslint />} title="ESLint" />
+  <Cards.Card href="./configs/prettier" icon={<SiPrettier />} title="Prettier" />
+  <Cards.Card href="./configs/typescript" icon={<SiTypescript />} title="Typescript" />
+</Cards>

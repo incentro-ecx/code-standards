@@ -1,0 +1,1 @@
+# @incentro-ic/config-cspell

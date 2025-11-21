@@ -26,7 +26,7 @@ pnpm add -D eslint @incentro-ic/config-eslint
 
 Create an ESLint configuration file and re-export this configuration:
 
-```js [eslint.config.js]
+```js filename="eslint.config.js"
 import config from "@incentro-ic/config-eslint";
 import { defineConfig } from "eslint/config";
 
@@ -48,7 +48,7 @@ export default defineConfig([
 
 The ESLint config uses [an ESLint plugin](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) for [CSpell](https://cspell.org/). If it detects [a CSpell config file](https://cspell.org/docs/Configuration) it will use that file to spell check the codebase. Example:
 
-```json [cspell.config.json]
+```json filename="cspell.config.json"
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
@@ -56,3 +56,57 @@ The ESLint config uses [an ESLint plugin](https://github.com/streetsidesoftware/
   "words": ["incentro"]
 }
 ```
+
+## ⚙️ Configs
+
+### 🏠 Base
+
+This is the base ESLint configuration that is applicable to all projects. This includes a set of general rules for linting Javascript code, without any framework-specific exceptions.
+
+#### 🪛 Usage
+
+```js filename="eslint.config.js"
+import config from "@incentro-ic/config-eslint";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+  ...config,
+  {
+    ignores: [
+      // Build output
+      "dist/**",
+
+      // Files in the root directory
+      "*.*",
+    ],
+  },
+]);
+```
+
+### 🔼 Next.js
+
+This is the ESLint configuration for all [Next.js](https://nextjs.org/) projects. It extends [the base configuration](#-base) and adds rules and exceptions specific to Next.js projects. For example, it adds [the Next.js ESLint plugin](https://nextjs.org/docs/app/api-reference/config/eslint) and allows default exports in files named `layout.tsx` and `page.tsx`.
+
+#### 🪛 Usage
+
+```js filename="eslint.config.js"
+export { default } from "@incentro-ic/config-eslint/next";
+```
+
+> [!NOTE]
+>
+> By default, the Next.js ESLint config ignores files in the `dist`, `.next`, and root directory. If you need to extend this list of ignored files, take a look at [the usage example for the base config](#-base) for an example on how to add ignored directories.
+
+### ⭐ Nextra
+
+This is the ESLint configuration for all [Nextra](https://nextra.site/) projects. It extends [the Next.js configuration](#-nextjs) and adds rules and exceptions specific to Nextra projects. For example, it allows default exports in files named `_meta.tsx`.
+
+#### 🪛 Usage
+
+```js filename="eslint.config.js"
+export { default } from "@incentro-ic/config-eslint/nextra";
+```
+
+> [!NOTE]
+>
+> By default, the Nextra ESLint config ignores files in the `dist`, `.next`, and root directory. If you need to extend this list of ignored files, take a look at [the usage example for the base config](#-base) for an example on how to add ignored directories.

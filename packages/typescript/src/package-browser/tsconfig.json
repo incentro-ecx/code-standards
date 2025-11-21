@@ -26,7 +26,7 @@
 
     // When targeting the browser, we can expect the package to be bundled by a
     // bundler. This means we can allow imports without extensions, or with
-    // `.ts` and `.tsx` extensions, and we can expect all files to be treaded
+    // `.ts` and `.tsx` extensions, and we can expect all files to be treated
     // as ES modules.
     "module": "esnext",
     "moduleResolution": "bundler",
