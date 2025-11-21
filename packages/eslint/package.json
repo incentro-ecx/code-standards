@@ -4,6 +4,7 @@
   "version": "1.0.3",
   "description": "A shared ESLint configuration for linting files.",
   "repository": "https://github.com/incentro-ecx/code-standards",
+  "license": "Unlicense",
   "sideEffects": false,
   "type": "module",
   "exports": {

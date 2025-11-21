@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "description": "Shared Typescript configurations.",
   "repository": "https://github.com/incentro-ecx/code-standards",
+  "license": "Unlicense",
   "sideEffects": false,
   "type": "module",
   "exports": {

@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "description": "Shared CSpell configurations.",
   "repository": "https://github.com/incentro-ecx/code-standards",
+  "license": "Unlicense",
   "sideEffects": false,
   "type": "module",
   "exports": {
