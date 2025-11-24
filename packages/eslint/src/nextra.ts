@@ -6,7 +6,7 @@ const config: Linter.Config[] = [
 
   {
     name: "incentro-ic/nextra",
-    files: ["src/app/**/_meta.{ts,tsx}"],
+    files: ["src/content/**/_meta.{ts,tsx}"],
     rules: {
       // Nextra requires default exports for page files.
       "import/no-default-export": "off",
