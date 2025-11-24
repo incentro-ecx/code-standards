@@ -23,6 +23,15 @@ jobs:
       - name: Install dependencies
         uses: ./.github/actions/install
 
+      - name: Setup Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            apps/docs/.next/cache
+          key: ${{ runner.os }}-next-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-next-${{ hashFiles('pnpm-lock.yaml') }}
+
       - name: Run builds
         run: pnpm build
 
