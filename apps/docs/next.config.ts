@@ -13,4 +13,8 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
+  typescript: {
+    // We run type checking separately in CI/CD pipelines.
+    ignoreBuildErrors: true,
+  },
 });
