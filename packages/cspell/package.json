@@ -20,20 +20,20 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean": "turbo run clean:build clean:cache clean:turbo --filter=@incentro-ic/config-cspell",
     "clean:build": "rimraf dist",
     "clean:cache": "rimraf node_modules/.cache",
     "clean:turbo": "rimraf .turbo",
-    "format": "pnpm run \"/^format:.*/\"",
+    "format": "turbo run format:eslint format:prettier --filter=@incentro-ic/config-cspell",
     "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
     "format:prettier": "prettier --write . --cache",
-    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint": "turbo run lint:eslint lint:prettier lint:typescript --filter=@incentro-ic/config-cspell",
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
     "lint:prettier": "prettier --check . --cache",
     "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
-    "@cspell/cspell-types": "^9.3.0"
+    "@cspell/cspell-types": "^9.3.2"
   },
   "devDependencies": {
     "@incentro-ic/config-eslint": "workspace:^",

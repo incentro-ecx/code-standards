@@ -6,32 +6,37 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "clean": {
-      "cache": false
-    },
     "clean:build": {
       "cache": false
     },
     "clean:cache": {
       "cache": false
     },
+    "//#clean:cache:root": {
+      "cache": false
+    },
     "clean:turbo": {
       "cache": false
     },
-    "format": {
-      "dependsOn": ["@incentro-ic/config-eslint#build"]
+    "//#clean:turbo:root": {
+      "cache": false
     },
     "format:eslint": {
-      "dependsOn": ["@incentro-ic/config-eslint#build"]
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build"
+      ]
     },
     "format:prettier": {},
-    "lint": {
-      "dependsOn": ["@incentro-ic/config-eslint#build"]
-    },
+    "//#format:prettier:root": {},
     "lint:eslint": {
-      "dependsOn": ["@incentro-ic/config-eslint#build"]
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build"
+      ]
     },
     "lint:prettier": {},
+    "//#lint:prettier:root": {},
     "lint:typescript": {},
     "serve": {
       "dependsOn": ["build"],

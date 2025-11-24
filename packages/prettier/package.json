@@ -19,12 +19,12 @@
     "prettier.config.d.ts"
   ],
   "scripts": {
-    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean": "turbo run clean:cache clean:turbo --filter=@incentro-ic/config-prettier",
     "clean:cache": "rimraf node_modules/.cache",
     "clean:turbo": "rimraf .turbo",
-    "format": "pnpm run \"/^format:.*/\"",
+    "format": "turbo run format:prettier --filter=@incentro-ic/config-prettier",
     "format:prettier": "prettier --write . --cache",
-    "lint": "pnpm run \"/^lint:.*/\"",
+    "lint": "turbo run lint:prettier --filter=@incentro-ic/config-prettier",
     "lint:prettier": "prettier --check . --cache"
   },
   "dependencies": {
