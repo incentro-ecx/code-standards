@@ -17,7 +17,7 @@
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
     "lint:prettier": "prettier --check . --cache",
     "lint:typescript": "tsc --noEmit",
-    "serve": "next start",
+    "serve": "serve dist",
     "start": "next dev"
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "eslint": "^9.39.1",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
+    "serve": "^14.2.5",
     "typescript": "^5.9.3"
   },
   "engines": {
