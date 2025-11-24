@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "rimraf": "^6.1.0"
+    "rimraf": "^6.1.2"
   },
   "peerDependencies": {
     "prettier": "^3.6.0"

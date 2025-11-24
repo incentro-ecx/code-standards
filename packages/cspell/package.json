@@ -41,7 +41,7 @@
     "@incentro-ic/config-typescript": "workspace:^",
     "eslint": "^9.39.1",
     "prettier": "^3.6.2",
-    "rimraf": "^6.1.0",
+    "rimraf": "^6.1.2",
     "typescript": "^5.9.3"
   }
 }
