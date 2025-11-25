@@ -1,2 +1,11 @@
 packages:
+  - "apps/*"
   - "packages/*"
+
+# Allow Sharp to compile itself during installation.
+onlyBuiltDependencies:
+  - sharp
+
+# Try to install packages locally (from the workspace) before trying to install
+# them from the registry.
+linkWorkspacePackages: true

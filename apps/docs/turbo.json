@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.v2.json",
+  "extends": ["//"],
+  "tasks": {
+    "format:eslint": {
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build",
+        "generate:types"
+      ]
+    },
+    "generate:types": {
+      "outputs": ["next-env.d.ts", "dist/types/**"]
+    },
+    "lint:typescript": {
+      "dependsOn": ["generate:types"]
+    },
+    "lint:eslint": {
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build",
+        "generate:types"
+      ]
+    }
+  }
+}

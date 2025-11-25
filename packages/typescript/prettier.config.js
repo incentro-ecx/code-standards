@@ -1,1 +1,1 @@
-export { default } from "@incentro-ecx/prettier-config";
+export { default } from "@incentro-ic/config-prettier";

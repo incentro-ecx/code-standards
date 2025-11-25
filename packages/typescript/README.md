@@ -1,24 +1,23 @@
-# Incentro ECX - Typescript
+# Incentro IC - Code Standards - Typescript
 
 ## 💫 Introduction
 
 This package provides a set of shared [Typescript](https://www.typescriptlang.org/) configuration files that can be used across different projects.
 
-- [🏠 Base](#-base) - `@incentro-ecx/typescript-config/tsconfig/base.json`
-- [📦 Package](#-package) - `@incentro-ecx/typescript-config/tsconfig/package.json`
-- [🟩 Package - Node](#-package---node) - `@incentro-ecx/typescript-config/tsconfig/package-node.json`
-- [⚛️ Package - React](#-package---react) - `@incentro-ecx/typescript-config/tsconfig/package-react.json`
-- [🦖 Docusaurus](#-docusaurus) - `@incentro-ecx/typescript-config/tsconfig/docusaurus.json`
+- [🏠 Base](#-base) - `@incentro-ic/typescript/base`
+- [📦 App - Next.js](#-app---next) - `@incentro-ic/typescript/app-next`
+- [📦 Package](#-package) - `@incentro-ic/typescript/package`
+- [🌎 Package - Browser](#-package---browser) - `@incentro-ic/typescript/package-browser/`
+- [🟩 Package - Node](#-package---node) - `@incentro-ic/typescript/package-node/`
+- [⚛️ Package - React](#%EF%B8%8F-package---react) - `@incentro-ic/typescript/package-react`
 
 ## 💾 Installation
 
 To install the package, use the following command:
 
 ```bash
-pnpm add -D typescript @incentro-ecx/typescript-config
+pnpm add -D typescript @incentro-ic/typescript
 ```
-
-You will need access to this repository, for more info read [this](../../docs/installing-from-this-repo.md).
 
 ## 🪛 Usage
 
@@ -26,80 +25,94 @@ After installing the package you can use the provided configuration as a basis b
 
 Here's an example:
 
-```json
+```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ecx/typescript-config/tsconfig/base.json"
+  "extends": "@incentro-ic/typescript"
 }
 ```
 
 > [!NOTE]
+>
 > The configuration files do not include any [`includes`](https://www.typescriptlang.org/tsconfig#include), [`files`](https://www.typescriptlang.org/tsconfig#files), [`exclude`](https://www.typescriptlang.org/tsconfig#exclude) or [`compilerOptions.outDir`](https://www.typescriptlang.org/tsconfig#outDir) options. You will need to add these options according to your project's requirements.
 
 ## ⚙️ Configs
 
 ### 🏠 Base
 
-This is the base Typescript configuration that is applicable to all projects. The settings in this configuration are primarily related to the strictness of TypeScript and should rarely be overridden as they do not affect the output or the compilation target.
+This is the base Typescript configuration that is applicable to all projects. The settings in this configuration are primarily related to the strictness of Typescript and should rarely be overridden as they do not affect the output or the compilation target.
 
 #### 🪛 Usage
 
-```json
+```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ecx/typescript-config/tsconfig/base.json"
+  "extends": "@incentro-ic/typescript"
+}
+```
+
+### 🔼 App - Next.js
+
+This is the Typescript configuration for all Next.js projects. It extends [the base configuration](#-base) and adds settings that are related to working with React and Next.js' Typescript plugin and type helpers.
+
+#### 🪛 Usage
+
+```json filename="tsconfig.json"
+{
+  "extends": "@incentro-ic/typescript/app-next"
 }
 ```
 
 ### 📦 Package
 
-This is the base Typescript configuration for all projects that are meant to be published as a package. It extends the base configuration and adds settings that are related to the output of the TypeScript compiler.
+This is the base Typescript configuration for all projects that are meant to be published as a package and do not specifically target the browser or a Node.js environment. It extends [the base configuration](#-base) and adds settings that are related to the output of the Typescript compiler.
 
 #### 🪛 Usage
 
-```json
+```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ecx/typescript-config/tsconfig/package.json"
+  "extends": "@incentro-ic/typescript/package"
+}
+```
+
+### 🌎 Package - Browser
+
+This is the Typescript configuration for all projects that are meant to be published as package targeting browser environments. It extends [the package configuration](#-package) and adds settings that are specific to browser environments, like enabling types for methods only available in DOM environments. It targets the latest versions of most major browsers.
+
+> [!IMPORTANT]
+>
+> This config [disables file emission by the Typescript compiler](https://www.typescriptlang.org/tsconfig/#noEmit) as it is expected that you'll be using a bundler to transform the source files for use in browser environments.
+
+#### 🪛 Usage
+
+```json filename="tsconfig.json"
+{
+  "extends": "@incentro-ic/typescript/package-browser"
 }
 ```
 
 ### 🟩 Package - Node
 
-This is the Typescript configuration for all projects that are meant to be published as Node.js packages. It extends the package configuration and adds settings that are related to Node.js, specifically the LTS version.
+This is the Typescript configuration for all projects that are meant to be published as Node.js packages. It extends [the package configuration](#-package) and adds settings that are related to Node.js, specifically the LTS version.
 
 #### 🪛 Usage
 
-```json
+```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ecx/typescript-config/tsconfig/package-node.json"
+  "extends": "@incentro-ic/typescript/package-node"
 }
 ```
 
 ### ⚛️ Package - React
 
-This is the Typescript configuration for all projects that are meant to be published as React packages. It extends the package configuration and adds settings that are related to interpreting JSX and adding DOM types.
-
-#### 🪛 Usage
-
-```json
-{
-  "extends": "@incentro-ecx/typescript-config/tsconfig/package-react.json"
-}
-```
-
-### 🦖 Docusaurus
-
-This is the Typescript configuration for all Docusaurus projects. It's based on the settings in the [`@docusaurus/tsconfig`](https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-tsconfig/tsconfig.json) package.
-
-#### 🪛 Usage
-
-```json
-{
-  "extends": "@incentro-ecx/typescript-config/tsconfig/docusaurus.json"
-}
-```
+This is the Typescript configuration for all projects that are meant to be published as React packages. It extends [the browser package configuration](#-package---browser) and adds settings that are related to interpreting JSX.
 
 > [!IMPORTANT]
-> To be able to use this config, you need to install the `@types/node`, `@docusaurus/module-type-aliases` and `@docusaurus/theme-classic` package:
 >
-> ```bash
-> pnpm add -D @types/node @docusaurus/module-type-aliases @docusaurus/theme-classic
-> ```
+> This config [disables file emission by the Typescript compiler](https://www.typescriptlang.org/tsconfig/#noEmit) as it is expected that you'll be using a bundler to transform the source files for use in browser environments.
+
+#### 🪛 Usage
+
+```json filename="tsconfig.json"
+{
+  "extends": "@incentro-ic/typescript/package-react"
+}
+```

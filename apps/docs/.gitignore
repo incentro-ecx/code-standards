@@ -1,0 +1,8 @@
+## Build output
+dist
+
+## Next.js cache
+.next
+
+## Generated Next.js types
+next-env.d.ts

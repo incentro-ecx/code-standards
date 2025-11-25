@@ -1,13 +1,9 @@
-declare module "eslint-plugin-eslint-comments" {
+declare module "@eslint-community/eslint-plugin-eslint-comments/configs" {
   import type { Linter } from "eslint";
 
-  const plugin: {
-    configs: {
-      recommended: {
-        rules: Linter.RulesRecord;
-      };
-    };
+  const configs: {
+    recommended: Linter.Config;
   };
 
-  export default plugin;
+  export default configs;
 }

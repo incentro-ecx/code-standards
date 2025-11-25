@@ -1,63 +1,68 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/eslint-config",
+  "name": "@incentro-ic/config-eslint",
   "version": "1.0.3",
-  "description": "A shared ESLint configuration for linting files.",
+  "description": "Shared ESLint configurations for linting files.",
   "repository": "https://github.com/incentro-ecx/code-standards",
+  "license": "Unlicense",
   "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
-    "./docusaurus": {
-      "default": "./dist/configs/docusaurus.js",
-      "types": "./dist/configs/docusaurus.d.ts"
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "default": "./dist/next.js"
+    },
+    "./nextra": {
+      "types": "./dist/nextra.d.ts",
+      "default": "./dist/nextra.js"
     }
   },
   "main": "dist/index.js",
   "files": [
+    "src/**",
     "dist/**"
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "pnpm run \"/^clean:.*/\"",
+    "clean": "turbo run clean:build clean:cache clean:turbo --filter=@incentro-ic/config-eslint",
     "clean:build": "rimraf dist",
     "clean:cache": "rimraf node_modules/.cache",
     "clean:turbo": "rimraf .turbo",
-    "format": "pnpm run \"/^format:.*/\"",
+    "format": "turbo run format:eslint format:prettier --filter=@incentro-ic/config-eslint",
     "format:eslint": "eslint . --fix --cache --cache-location node_modules/.cache/eslint",
     "format:prettier": "prettier --write . --cache",
-    "lint": "pnpm run \"/^lint:.*/\"",
+    "inspect": "eslint --inspect-config",
+    "lint": "turbo run lint:eslint lint:prettier lint:typescript --filter=@incentro-ic/config-eslint",
     "lint:eslint": "eslint . --cache --cache-location node_modules/.cache/eslint",
-    "lint:prettier": "prettier --check . --cache"
+    "lint:prettier": "prettier --check . --cache",
+    "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
-    "@eslint/js": "^9.16.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import-x": "^4.3.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-unicorn": "^52.0.0",
-    "globals": "^15.1.0",
-    "typescript-eslint": "^7.7.1"
+    "@cspell/eslint-plugin": "^9.3.2",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.39.1",
+    "@next/eslint-plugin-next": "^16.0.3",
+    "@vitest/eslint-plugin": "^1.4.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "typescript-eslint": "^8.47.0"
   },
   "devDependencies": {
-    "@incentro-ecx/prettier-config": "workspace:^",
-    "@incentro-ecx/typescript-config": "workspace:^",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20.12.7",
-    "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "typescript": "~5.4.5"
-  },
-  "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com"
+    "@incentro-ic/config-prettier": "workspace:^",
+    "@incentro-ic/config-typescript": "workspace:^",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
   }
 }

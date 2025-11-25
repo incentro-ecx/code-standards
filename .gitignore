@@ -1,12 +1,27 @@
-# Package managers
+# Installed PNPM packages
 node_modules
 
-# IDE
-.idea
-
-# Turbo
+## Turborepo cache files
 .turbo
 
-# Configuration and sensitive data
-.env
+## Environment variables
+/.env
+
+## NPM config file possibly containing secrets
 .npmrc
+
+# IntelliJ preferences folders
+.idea
+.idea/*
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Miscellaneous
+.DS_Store
+*.pem

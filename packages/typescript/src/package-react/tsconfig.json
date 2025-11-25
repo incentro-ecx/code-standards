@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Package - React",
+  "extends": "../package-browser/tsconfig.json",
+
+  "compilerOptions": {
+    // For a package targeting React, enable JSX support.
+    "jsx": "react-jsx"
+  }
+}

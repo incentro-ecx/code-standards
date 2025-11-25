@@ -1,0 +1,3 @@
+# Personal Access Token from NPM for installing and publishing packages.
+# https://docs.npmjs.com/creating-and-viewing-access-tokens
+//registry.npmjs.org/:_authToken=<TOKEN>

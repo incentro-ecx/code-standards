@@ -1,12 +1,10 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turbo.build/schema.v2.json",
+  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
-    },
-    "clean": {
-      "cache": false
     },
     "clean:build": {
       "cache": false
@@ -14,23 +12,39 @@
     "clean:cache": {
       "cache": false
     },
+    "//#clean:cache:root": {
+      "cache": false
+    },
     "clean:turbo": {
       "cache": false
     },
-    "format": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+    "//#clean:turbo:root": {
+      "cache": false
     },
     "format:eslint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build"
+      ]
     },
     "format:prettier": {},
-    "lint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
-    },
+    "//#format:prettier:root": {},
     "lint:eslint": {
-      "dependsOn": ["@incentro-ecx/eslint-config#build"]
+      "dependsOn": [
+        "@incentro-ic/config-cspell#build",
+        "@incentro-ic/config-eslint#build"
+      ]
     },
     "lint:prettier": {},
-    "lint:typescript": {}
+    "//#lint:prettier:root": {},
+    "lint:typescript": {},
+    "serve": {
+      "dependsOn": ["build"],
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["^build"],
+      "persistent": true
+    }
   }
 }

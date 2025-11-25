@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Package - Browser",
+  "extends": "../package/tsconfig.json",
+
+  "compilerOptions": {
+    // When targeting the browser, a bundler should be used to prepare the
+    // source code for running in the browser. This means we don't want the
+    // Typescript compiler to emit any files, as the bundler will take care of
+    // that.
+    "noEmit": true,
+
+    // When building a package for the browser, all ES2024, and some ES2025 /
+    // ESNext features are available in most modern browsers.
+    // Source: https://compat-table.github.io/compat-table/es2016plus/
+    "target": "es2024",
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator",
+      "ESNext.Promise"
+    ],
+
+    // When targeting the browser, we can expect the package to be bundled by a
+    // bundler. This means we can allow imports without extensions, or with
+    // `.ts` and `.tsx` extensions, and we can expect all files to be treated
+    // as ES modules.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force"
+  }
+}

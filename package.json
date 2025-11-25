@@ -1,45 +1,53 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@incentro-ecx/code-standards",
+  "name": "@incentro-ic/root",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "Unlicense",
   "type": "module",
   "scripts": {
     "build": "turbo run build",
     "changeset:add": "changeset add",
     "changeset:publish": "changeset publish",
     "changeset:version": "env-cmd changeset version",
-    "clean": "pnpm run \"/^clean:.*:root/\" && turbo run clean",
+    "clean": "turbo run clean:build clean:cache clean:cache:root clean:turbo clean:turbo:root",
     "clean:build": "turbo run clean:build",
     "clean:cache": "turbo run clean:cache",
     "clean:cache:root": "rimraf node_modules/.cache",
     "clean:turbo": "turbo run clean:turbo",
     "clean:turbo:root": "rimraf .turbo",
-    "format": "pnpm run \"/^format:.*:root/\" && turbo run format",
+    "cspell:build": "turbo run @incentro-ic/config-cspell#build --ui stream",
+    "docs:build": "turbo run @incentro-ic/docs#build --ui stream",
+    "docs:serve": "turbo run @incentro-ic/docs#serve --ui stream",
+    "docs:start": "turbo run @incentro-ic/docs#start --ui stream",
+    "eslint:build": "turbo run @incentro-ic/config-eslint#build --ui stream",
+    "eslint:inspect": "turbo run @incentro-ic/config-eslint#inspect --ui stream",
+    "format": "turbo run format:eslint format:prettier format:prettier:root",
     "format:eslint": "turbo run format:eslint",
-    "format:prettier": "pnpm run format:prettier:root && turbo run format:prettier",
+    "format:prettier": "turbo run format:prettier",
     "format:prettier:root": "prettier --write *.* --cache",
-    "lint": " pnpm run \"/^lint:.*:root/\" && turbo run lint",
+    "lint": "turbo run lint:eslint lint:prettier lint:prettier:root lint:typescript",
     "lint:eslint": "turbo run lint:eslint",
-    "lint:prettier": "pnpm run lint:prettier:root && turbo run lint:prettier",
+    "lint:prettier": "turbo run lint:prettier",
     "lint:prettier:root": "prettier --check *.* --cache",
     "lint:typescript": "turbo run lint:typescript",
-    "prepare": "turbo run build --filter=@incentro-ecx/eslint-config",
-    "serve": "turbo run serve",
-    "start": "turbo run start"
+    "prepare": "turbo run @incentro-ic/config-cspell#build @incentro-ic/config-eslint#build"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.10",
-    "@incentro-ecx/prettier-config": "workspace:*",
+    "@changesets/cli": "^2.29.6",
+    "@incentro-ic/config-cspell": "workspace:^",
+    "@incentro-ic/config-prettier": "workspace:*",
     "@svitejs/changesets-changelog-github-compact": "^1.2.0",
-    "env-cmd": "^10.1.0",
-    "prettier": "^3.4.1",
-    "rimraf": "^5.0.10",
-    "turbo": "^2.3.3"
+    "env-cmd": "^11.0.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.2",
+    "turbo": "^2.6.1"
   },
-  "packageManager": "pnpm@9.11.0",
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=9"
+  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=24",
+      "onFail": "warn"
+    }
   }
 }
