@@ -5,7 +5,7 @@
   "license": "Unlicense",
   "type": "module",
   "scripts": {
-    "build": "turbo run generate:search",
+    "build": "turbo run build:next generate:search",
     "build:next": "next build",
     "clean": "turbo run clean:build clean:cache clean:next clean:turbo --filter=@incentro-ic/docs",
     "clean:build": "rimraf dist",
