@@ -1,5 +1,11 @@
 # @incentro-ic/config-typescript
 
+## 2.0.1
+
+### Patch Changes
+
+- Remove dev dependency on `@incentro-ic/config-prettier` to avoid circular dependency. ([#10](https://github.com/incentro-ecx/code-standards/pull/10))
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @incentro-ic/config-prettier
 
+## 3.0.1
+
+### Patch Changes
+
+- Replace [`prettier-plugin-packagejson`](https://www.npmjs.com/package/prettier-plugin-packagejson) with a built-in plugin because of bugs in subdependency `synckit`. ([#10](https://github.com/incentro-ecx/code-standards/pull/10))
+
 ## 3.0.0
 
 ### Major Changes
