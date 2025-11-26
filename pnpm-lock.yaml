@@ -188,13 +188,25 @@ importers:
       prettier-plugin-packagejson:
         specifier: ^2.5.19
         version: 2.5.19(prettier@3.6.2)
+      sort-package-json:
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
+      '@incentro-ic/config-typescript':
+        specifier: workspace:^
+        version: link:../typescript
+      '@types/node':
+        specifier: ^24.10.1
+        version: 24.10.1
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
       rimraf:
         specifier: ^6.1.2
         version: 6.1.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/typescript:
     dependencies:
@@ -205,9 +217,6 @@ importers:
         specifier: ^24.10.1
         version: 24.10.1
     devDependencies:
-      '@incentro-ic/config-prettier':
-        specifier: workspace:^
-        version: link:../prettier
       prettier:
         specifier: ^3.6.2
         version: 3.6.2

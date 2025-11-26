@@ -13,7 +13,7 @@
       "default": "./dist/index.js"
     }
   },
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "files": [
     "src/**",
     "dist/**"

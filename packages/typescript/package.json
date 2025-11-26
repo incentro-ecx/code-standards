@@ -33,7 +33,6 @@
     "@types/node": "^24.10.1"
   },
   "devDependencies": {
-    "@incentro-ic/config-prettier": "workspace:^",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.2"
   },

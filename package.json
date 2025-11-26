@@ -30,7 +30,7 @@
     "lint:prettier": "turbo run lint:prettier",
     "lint:prettier:root": "prettier --check *.* --cache",
     "lint:typescript": "turbo run lint:typescript",
-    "prepare": "turbo run @incentro-ic/config-cspell#build @incentro-ic/config-eslint#build"
+    "prepare": "turbo run @incentro-ic/config-cspell#build @incentro-ic/config-eslint#build @incentro-ic/config-prettier#build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.6",

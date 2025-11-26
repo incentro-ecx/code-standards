@@ -24,19 +24,29 @@
     "format:eslint": {
       "dependsOn": [
         "@incentro-ic/config-cspell#build",
-        "@incentro-ic/config-eslint#build"
+        "@incentro-ic/config-eslint#build",
+        "@incentro-ic/config-prettier#build"
       ]
     },
-    "format:prettier": {},
-    "//#format:prettier:root": {},
+    "format:prettier": {
+      "dependsOn": ["@incentro-ic/config-prettier#build"]
+    },
+    "//#format:prettier:root": {
+      "dependsOn": ["@incentro-ic/config-prettier#build"]
+    },
     "lint:eslint": {
       "dependsOn": [
         "@incentro-ic/config-cspell#build",
-        "@incentro-ic/config-eslint#build"
+        "@incentro-ic/config-eslint#build",
+        "@incentro-ic/config-prettier#build"
       ]
     },
-    "lint:prettier": {},
-    "//#lint:prettier:root": {},
+    "lint:prettier": {
+      "dependsOn": ["@incentro-ic/config-prettier#build"]
+    },
+    "//#lint:prettier:root": {
+      "dependsOn": ["@incentro-ic/config-prettier#build"]
+    },
     "lint:typescript": {},
     "serve": {
       "dependsOn": ["build"],
