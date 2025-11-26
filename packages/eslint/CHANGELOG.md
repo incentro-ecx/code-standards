@@ -1,5 +1,15 @@
 # @incentro-ic/config-eslint
 
+## 2.0.0
+
+### Major Changes
+
+- Merged the original source of this repository (part of the `micro.nova` project) into this project. This includes an upgrade to the latest ESLint version, updates to its dependencies. It also reverts back from using `eslint-plugin-import-x` to `eslint-plugin-import`, and adds the [CSpell ESLint plugin](https://www.npmjs.com/package/@cspell/eslint-plugin) and the [Vitest ESLint plugin](https://github.com/vitest-dev/eslint-plugin-vitest). ([#8](https://github.com/incentro-ecx/code-standards/pull/8))
+
+### Minor Changes
+
+- Added a default configuration for [Next.js](https://nextjs.org/) and [Nextra](https://nextra.site/) projects. ([#8](https://github.com/incentro-ecx/code-standards/pull/8))
+
 ## 1.0.3
 
 ### Patch Changes

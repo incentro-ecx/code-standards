@@ -1,5 +1,11 @@
 # @incentro-ic/config-prettier
 
+## 3.0.0
+
+### Major Changes
+
+- Merged the original source of this repository (part of the `micro.nova` project) into this project. This includes an upgrade to the latest Prettier version, updates to its dependencies, and fixes compatibility with PNPM version 10. It also includes [a **breaking** upgrade of the `prettier-plugin-organize-imports` plugin when formatting with Vue](https://github.com/simonhaenisch/prettier-plugin-organize-imports/releases/tag/v4.0.0). ([#8](https://github.com/incentro-ecx/code-standards/pull/8))
+
 ## 1.0.3
 
 ### Patch Changes

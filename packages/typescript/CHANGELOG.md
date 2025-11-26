@@ -1,5 +1,15 @@
 # @incentro-ic/config-typescript
 
+## 2.0.0
+
+### Major Changes
+
+- Merged the original source of this repository (part of the `micro.nova` project) into this project. This includes **breaking** changes to various Typescript configs, updates their entrypoints, and removes the `docusaurus` config. In the merger the `react-router` Typescript wasn't copied because it was based on experimental RSC features for React Router. ([#8](https://github.com/incentro-ecx/code-standards/pull/8))
+
+### Minor Changes
+
+- Adds a default configuration for [Next.js](https://nextjs.org/) projects. ([#8](https://github.com/incentro-ecx/code-standards/pull/8))
+
 ## 1.0.1
 
 ### Patch Changes
