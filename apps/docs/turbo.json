@@ -2,12 +2,22 @@
   "$schema": "https://turbo.build/schema.v2.json",
   "extends": ["//"],
   "tasks": {
+    "build": {
+      "outputs": []
+    },
+    "build:next": {
+      "outputs": ["dist/**"]
+    },
     "format:eslint": {
       "dependsOn": [
         "@incentro-ic/config-cspell#build",
         "@incentro-ic/config-eslint#build",
         "generate:types"
       ]
+    },
+    "generate:search": {
+      "dependsOn": ["build:next"],
+      "outputs": ["dist/_pagefind/**"]
     },
     "generate:types": {
       "outputs": ["next-env.d.ts", "dist/types/**"]
