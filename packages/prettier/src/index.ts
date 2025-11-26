@@ -24,6 +24,6 @@ const require = createRequire(import.meta.url);
 export default {
   plugins: [
     "prettier-plugin-organize-imports",
-    "prettier-plugin-packagejson",
-  ].map(require.resolve),
+    "./plugins/package-json.js",
+  ].map((path) => require.resolve(path)),
 };

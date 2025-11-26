@@ -185,16 +185,25 @@ importers:
       prettier-plugin-organize-imports:
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.6.2)(typescript@5.9.3)
-      prettier-plugin-packagejson:
-        specifier: ^2.5.19
-        version: 2.5.19(prettier@3.6.2)
+      sort-package-json:
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
+      '@incentro-ic/config-typescript':
+        specifier: workspace:^
+        version: link:../typescript
+      '@types/node':
+        specifier: ^24.10.1
+        version: 24.10.1
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
       rimraf:
         specifier: ^6.1.2
         version: 6.1.2
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/typescript:
     dependencies:
@@ -205,9 +214,6 @@ importers:
         specifier: ^24.10.1
         version: 24.10.1
     devDependencies:
-      '@incentro-ic/config-prettier':
-        specifier: workspace:^
-        version: link:../prettier
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -3764,14 +3770,6 @@ packages:
       vue-tsc: ^2.1.0 || 3
     peerDependenciesMeta:
       vue-tsc:
-        optional: true
-
-  prettier-plugin-packagejson@2.5.19:
-    resolution: {integrity: sha512-Qsqp4+jsZbKMpEGZB1UP1pxeAT8sCzne2IwnKkr+QhUe665EXUo3BAvTf1kAPCqyMv9kg3ZmO0+7eOni/C6Uag==}
-    peerDependencies:
-      prettier: '>= 1.16.0'
-    peerDependenciesMeta:
-      prettier:
         optional: true
 
   prettier@2.8.8:
@@ -9066,13 +9064,6 @@ snapshots:
     dependencies:
       prettier: 3.6.2
       typescript: 5.9.3
-
-  prettier-plugin-packagejson@2.5.19(prettier@3.6.2):
-    dependencies:
-      sort-package-json: 3.4.0
-      synckit: 0.11.11
-    optionalDependencies:
-      prettier: 3.6.2
 
   prettier@2.8.8: {}
 

@@ -9,17 +9,19 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./prettier.config.d.ts",
-      "default": "./prettier.config.js"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
-  "main": "./prettier.config.js",
+  "main": "./dist/index.js",
   "files": [
-    "prettier.config.js",
-    "prettier.config.d.ts"
+    "src/**",
+    "dist/**"
   ],
   "scripts": {
-    "clean": "turbo run clean:cache clean:turbo --filter=@incentro-ic/config-prettier",
+    "build": "tsc",
+    "clean": "turbo run clean:build clean:cache clean:turbo --filter=@incentro-ic/config-prettier",
+    "clean:build": "rimraf dist",
     "clean:cache": "rimraf node_modules/.cache",
     "clean:turbo": "rimraf .turbo",
     "format": "turbo run format:prettier --filter=@incentro-ic/config-prettier",
@@ -29,11 +31,14 @@
   },
   "dependencies": {
     "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-packagejson": "^2.5.19"
+    "sort-package-json": "^3.4.0"
   },
   "devDependencies": {
+    "@incentro-ic/config-typescript": "workspace:^",
+    "@types/node": "^24.10.1",
     "prettier": "^3.6.2",
-    "rimraf": "^6.1.2"
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "prettier": "^3.6.0"
