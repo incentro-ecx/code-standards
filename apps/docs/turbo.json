@@ -17,6 +17,7 @@
     },
     "generate:search": {
       "dependsOn": ["build:next"],
+      "inputs": ["dist/**", "!dist/_pagefind/**"],
       "outputs": ["dist/_pagefind/**"]
     },
     "generate:types": {
