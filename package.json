@@ -16,7 +16,7 @@
     "clean:turbo": "turbo run clean:turbo",
     "clean:turbo:root": "rimraf .turbo",
     "cspell:build": "turbo run @incentro-ic/config-cspell#build --ui stream",
-    "docs:build": "turbo run @incentro-ic/docs#build --ui stream",
+    "docs:build": "turbo run @incentro-ic/docs#build",
     "docs:serve": "turbo run @incentro-ic/docs#serve --ui stream",
     "docs:start": "turbo run @incentro-ic/docs#start --ui stream",
     "eslint:build": "turbo run @incentro-ic/config-eslint#build --ui stream",
