@@ -101,7 +101,7 @@ export const typescriptConfigs: Linter.Config[] = [
       // with data structures where the type system cannot easily express the
       // nullability. We disable this rule to allow explicit type
       // assertions in such cases.
-      "@typescript-eslint/non-nullable-type-assertion-style": "off"
+      "@typescript-eslint/non-nullable-type-assertion-style": "off",
     },
   },
 ];
