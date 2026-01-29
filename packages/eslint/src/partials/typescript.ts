@@ -103,6 +103,23 @@ export const typescriptConfigs: Linter.Config[] = [
         "error",
         { checksVoidReturn: false },
       ],
+
+      // We emulate the behavior of Typescript's `noUnusedLocals` and
+      // `noUnusedParameters` compiler options, but with more granularity by
+      // allowing unused variables and parameters that start with an
+      // underscore.
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
 ];
