@@ -14,6 +14,14 @@ Shared [ESLint](https://eslint.org/) configuration for linting files. It enforce
 - [`@vitest/eslint-plugin`](https://github.com/vitest-dev/eslint-plugin-vitest) - Checks around Vitest test files.
 - [`@cspell/eslint-plugin`](https://github.com/streetsidesoftware/cspell/tree/main/packages/cspell-eslint-plugin) - Checks spelling and grammar.
 
+The following configurations are available:
+
+- [🏠 Base](#-base) - `@incentro-ic/config-eslint/base`
+- [🦁 NestJS](#-nestjs) - `@incentro-ic/config-eslint/nest`
+- [🔼 Next.js](#-nextjs) - `@incentro-ic/config-eslint/next`
+- [⭐ Nextra](#-nextra) - `@incentro-ic/config-eslint/nextra`
+- [🔴 React Router](#-react-router) - `@incentro-ic/config-eslint/react-router`
+
 ## 💾 Installation
 
 To install the package, use the following command:

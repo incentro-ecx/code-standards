@@ -4,21 +4,21 @@
 
 This package provides a set of shared [Typescript](https://www.typescriptlang.org/) configuration files that can be used across different projects.
 
-- [🏠 Base](#-base) - `@incentro-ic/typescript/base`
-- [🦁 App - NestJS](#-app---nestjs) - `@incentro-ic/typescript/app-nest`
-- [🔼 App - Next.js](#-app---nextjs) - `@incentro-ic/typescript/app-next`
-- [🔴 App - React Router](#-app---react-router) - `@incentro-ic/typescript/app-react-router`
-- [📦 Package](#-package) - `@incentro-ic/typescript/package`
-- [🌎 Package - Browser](#-package---browser) - `@incentro-ic/typescript/package-browser/`
-- [🟩 Package - Node](#-package---node) - `@incentro-ic/typescript/package-node/`
-- [⚛️ Package - React](#%EF%B8%8F-package---react) - `@incentro-ic/typescript/package-react`
+- [🏠 Base](#-base) - `@incentro-ic/config-typescript/base`
+- [🦁 App - NestJS](#-app---nestjs) - `@incentro-ic/config-typescript/app-nest`
+- [🔼 App - Next.js](#-app---nextjs) - `@incentro-ic/config-typescript/app-next`
+- [🔴 App - React Router](#-app---react-router) - `@incentro-ic/config-typescript/app-react-router`
+- [📦 Package](#-package) - `@incentro-ic/config-typescript/package`
+- [🌎 Package - Browser](#-package---browser) - `@incentro-ic/config-typescript/package-browser/`
+- [🟩 Package - Node](#-package---node) - `@incentro-ic/config-typescript/package-node/`
+- [⚛️ Package - React](#%EF%B8%8F-package---react) - `@incentro-ic/config-typescript/package-react`
 
 ## 💾 Installation
 
 To install the package, use the following command:
 
 ```bash
-pnpm add -D typescript @incentro-ic/typescript
+pnpm add -D typescript @incentro-ic/config-typescript
 ```
 
 ## 🪛 Usage
@@ -29,7 +29,7 @@ Here's an example:
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript"
+  "extends": "@incentro-ic/config-typescript"
 }
 ```
 
@@ -47,7 +47,7 @@ This is the base Typescript configuration that is applicable to all projects. Th
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript"
+  "extends": "@incentro-ic/config-typescript"
 }
 ```
 
@@ -59,7 +59,7 @@ This is the Typescript configuration for all NestJS projects. It extends [the ba
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/app-nest"
+  "extends": "@incentro-ic/config-typescript/app-nest"
 }
 ```
 
@@ -71,7 +71,7 @@ This is the Typescript configuration for all Next.js projects. It extends [the b
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/app-next"
+  "extends": "@incentro-ic/config-typescript/app-next"
 }
 ```
 
@@ -83,7 +83,7 @@ This is the Typescript configuration for all React Router projects. It extends [
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/app-react-router"
+  "extends": "@incentro-ic/config-typescript/app-react-router"
 }
 ```
 
@@ -95,7 +95,7 @@ This is the base Typescript configuration for all projects that are meant to be 
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/package"
+  "extends": "@incentro-ic/config-typescript/package"
 }
 ```
 
@@ -111,7 +111,7 @@ This is the Typescript configuration for all projects that are meant to be publi
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/package-browser"
+  "extends": "@incentro-ic/config-typescript/package-browser"
 }
 ```
 
@@ -123,7 +123,7 @@ This is the Typescript configuration for all projects that are meant to be publi
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/package-node"
+  "extends": "@incentro-ic/config-typescript/package-node"
 }
 ```
 
@@ -139,6 +139,6 @@ This is the Typescript configuration for all projects that are meant to be publi
 
 ```json filename="tsconfig.json"
 {
-  "extends": "@incentro-ic/typescript/package-react"
+  "extends": "@incentro-ic/config-typescript/package-react"
 }
 ```
