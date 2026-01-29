@@ -91,6 +91,18 @@ export const typescriptConfigs: Linter.Config[] = [
         "error",
         { ignoreArrowShorthand: true },
       ],
+
+      // Disallowing passing async functions to places that expect
+      // void-returning can lead to conflicts with other rules. For example,
+      // when passing an async function to an event handler. To unregister
+      // these, the function passed to the handler should be the same reference
+      // to the function as when unsubscribing. Wrapping the function in an
+      // anonymous function would create a different reference, making it
+      // impossible to unsubscribe.
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        { checksVoidReturn: false },
+      ],
     },
   },
 ];
