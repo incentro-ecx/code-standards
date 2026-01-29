@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "App - React Router",
+  "extends": "../base/tsconfig.json",
+
+  // Based on: https://github.com/remix-run/react-router-templates/blob/main/default/tsconfig.json
+
+  "compilerOptions": {
+    // When using React Router, Vite is used to create the output files,
+    // removing the need for the Typescript compiler to emit any files.
+    "noEmit": true,
+
+    // When building a package for the browser, all ES2024, and some ES2025 /
+    // ESNext features are available in most modern browsers.
+    //
+    // The default for React Router is "ES2022" but that is unnecessarily
+    // limiting. React Router (using Vite) also includes polyfills for newer
+    // features when needed, so we can safely use all ESNext features.
+    //
+    // Source: https://compat-table.github.io/compat-table/es2016plus/
+    "target": "es2024",
+    "lib": ["DOM", "DOM.Iterable", "ESNEXT"],
+
+    // When using React Router, Vite is used to prepare the source code for
+    // running in the browser. This means we can allow imports without
+    // extensions, or with `.ts` and `.tsx` extensions, and we can expect all
+    // files to be treated as ES modules.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+
+    // Doesn't really matter, as Typescript isn't used to process JSX.
+    "jsx": "preserve",
+
+    // Include built-in types for Node.js and Vite's client-side code.
+    "types": ["node", "vite/client"]
+  }
+}

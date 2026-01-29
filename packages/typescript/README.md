@@ -5,7 +5,9 @@
 This package provides a set of shared [Typescript](https://www.typescriptlang.org/) configuration files that can be used across different projects.
 
 - [🏠 Base](#-base) - `@incentro-ic/typescript/base`
-- [📦 App - Next.js](#-app---next) - `@incentro-ic/typescript/app-next`
+- [🦁 App - NestJS](#-app---nestjs) - `@incentro-ic/typescript/app-nest`
+- [🔼 App - Next.js](#-app---nextjs) - `@incentro-ic/typescript/app-next`
+- [🔴 App - React Router](#-app---react-router) - `@incentro-ic/typescript/app-react-router`
 - [📦 Package](#-package) - `@incentro-ic/typescript/package`
 - [🌎 Package - Browser](#-package---browser) - `@incentro-ic/typescript/package-browser/`
 - [🟩 Package - Node](#-package---node) - `@incentro-ic/typescript/package-node/`
@@ -49,6 +51,18 @@ This is the base Typescript configuration that is applicable to all projects. Th
 }
 ```
 
+### 🦁 App - NestJS
+
+This is the Typescript configuration for all NestJS projects. It extends [the base configuration](#-base) and adds settings that are related to working with NestJS projects, like accepting unused class properties which is a common pattern in NestJS projects.
+
+#### 🪛 Usage
+
+```json filename="tsconfig.json"
+{
+  "extends": "@incentro-ic/typescript/app-nest"
+}
+```
+
 ### 🔼 App - Next.js
 
 This is the Typescript configuration for all Next.js projects. It extends [the base configuration](#-base) and adds settings that are related to working with React and Next.js' Typescript plugin and type helpers.
@@ -58,6 +72,18 @@ This is the Typescript configuration for all Next.js projects. It extends [the b
 ```json filename="tsconfig.json"
 {
   "extends": "@incentro-ic/typescript/app-next"
+}
+```
+
+### 🔴 App - React Router
+
+This is the Typescript configuration for all React Router projects. It extends [the base configuration](#-base) and adds settings that are related to working with React and React Router projects.
+
+#### 🪛 Usage
+
+```json filename="tsconfig.json"
+{
+  "extends": "@incentro-ic/typescript/app-react-router"
 }
 ```
 
