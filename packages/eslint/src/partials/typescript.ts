@@ -120,6 +120,18 @@ export const typescriptConfigs: Linter.Config[] = [
           ignoreRestSiblings: true,
         },
       ],
+
+      // This rule encourages replacing explicit type assertions with non-null
+      // assertions (`!`). It directly conflicts with 
+      // @typescript-eslint/no-non-null-assertion, which we intentionally keep
+      // enabled to avoid introducing subtle runtime errors and hard-to-spot 
+      // null assertion errors. However, there is a reason to want to opt-in to
+      // non-null assertions in some cases, for example when dealing with 
+      // third-party libraries without proper types or when dealing with data 
+      // structures where the type system cannot easily express the 
+      // nullability. We disable this rule to allow explicit type assertions in
+      // such cases.
+      "@typescript-eslint/non-nullable-type-assertion-style": "off",
     },
   },
 ];
