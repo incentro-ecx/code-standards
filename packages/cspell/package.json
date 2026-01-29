@@ -33,14 +33,14 @@
     "lint:typescript": "tsc --noEmit"
   },
   "dependencies": {
-    "@cspell/cspell-types": "^9.3.2"
+    "@cspell/cspell-types": "^9.6.2"
   },
   "devDependencies": {
     "@incentro-ic/config-eslint": "workspace:^",
     "@incentro-ic/config-prettier": "workspace:^",
     "@incentro-ic/config-typescript": "workspace:^",
-    "eslint": "^9.39.1",
-    "prettier": "^3.6.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "typescript": "^5.9.3"
   },

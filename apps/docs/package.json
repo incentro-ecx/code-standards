@@ -25,11 +25,11 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@icons-pack/react-simple-icons": "^13.8.0",
-    "next": "^16.0.3",
-    "nextra": "^4.6.0",
-    "nextra-theme-docs": "^4.6.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "next": "^16.1.6",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@incentro-ic/config-eslint": "workspace:^",
@@ -37,8 +37,8 @@
     "@incentro-ic/config-typescript": "workspace:^",
     "@types/react": "19.2.7",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.1",
-    "prettier": "^3.6.2",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "serve": "^14.2.5",
     "typescript": "^5.9.3"

@@ -7,9 +7,9 @@ const parser = babel.parsers["json-stringify"];
 export const parsers: Plugin["parsers"] = {
   "json-stringify": {
     ...parser,
-    preprocess(text, options) {
+    async preprocess(text, options) {
       if (parser.preprocess) {
-        text = parser.preprocess(text, options);
+        text = await parser.preprocess(text, options);
       }
 
       if (options.filepath.endsWith("package.json")) {
