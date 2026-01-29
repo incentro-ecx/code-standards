@@ -2,4 +2,4 @@
 "@incentro-ic/config-eslint": minor
 ---
 
-disable `@typescript-eslint/no-misused-promises` for void returns
+Disable `@typescript-eslint/no-misused-promises` for void returns.

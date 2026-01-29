@@ -12,6 +12,10 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./nest": {
+      "types": "./dist/nest.d.ts",
+      "default": "./dist/nest.js"
+    },
     "./next": {
       "types": "./dist/next.d.ts",
       "default": "./dist/next.js"
@@ -19,6 +23,10 @@
     "./nextra": {
       "types": "./dist/nextra.d.ts",
       "default": "./dist/nextra.js"
+    },
+    "./react-router": {
+      "types": "./dist/react-router.d.ts",
+      "default": "./dist/react-router.js"
     }
   },
   "main": "dist/index.js",
