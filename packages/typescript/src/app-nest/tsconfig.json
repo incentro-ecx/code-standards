@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "App - NestJS",
+  "extends": "../base/tsconfig.json",
+
+  // Based on: https://github.com/nestjs/typescript-starter/blob/master/tsconfig.json
+
+  "compilerOptions": {
+    // When using NestJS, a bundler (like SWC) is used to create the output files.
+    "noEmit": true,
+
+    // Creating unused class properties is common in NestJS applications due to
+    // the use of decorators for field metadata.
+    "strictPropertyInitialization": false,
+
+    // When targeting Node.js version 24 and above, we know the following
+    // features are available without polyfills, so we can include the built-in
+    // Typescript types for them.
+    // Sources:
+    //   - https://github.com/tsconfig/bases/blob/main/bases/node24.json
+    //   - https://node.green/#ES2024
+    "target": "es2024",
+    "lib": [
+      "ES2024",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Iterator",
+      "ESNext.Promise"
+    ],
+
+    // When using NestJS, a bundler (like SWC) is used to prepare the source
+    // code before executing it with Node.js. This means we can allow imports
+    // without extensions, or with `.ts` extensions, and we can expect all
+    // files to be treated as ES modules.
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+
+    // Include built-in types for Node.js.
+    "types": ["node"]
+  }
+}

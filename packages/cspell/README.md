@@ -14,7 +14,7 @@ pnpm add -D @incentro-ic/config-cspell
 
 ## 🪛 Usage
 
-Create an CSPell configuration file and re-export this configuration:
+Create [a CSpell configuration file](https://cspell.org/docs/Configuration) (e.g. `cspell.config.js`) and re-export this configuration:
 
 ```js filename="cspell.config.js"
 export { default } from "@incentro-ic/config-cspell";
@@ -34,3 +34,31 @@ export default {
   words: [...config.words, "flubbernator"],
 };
 ```
+
+### 🇳🇱 Accepting Dutch words
+
+By default the configuration will only allow the use of English words, since this is most common on our code bases. However, this will result in warnings when you use Dutch words in strings and other constants. To allow the use of Dutch words you first have to install the Dutch language dictionary:
+
+```bash
+pnpm add -D @cspell/dict-nl-nl
+```
+
+Then, you have to extend the CSpell config to import the Dutch language dictionary and accept the Dutch language:
+
+```js filename="cspell.config.js"
+import config from "@incentro-ic/config-cspell";
+
+export default {
+  ...config,
+  import: ["@cspell/dict-nl-nl/cspell-ext.json"],
+  language: "en,nl",
+};
+```
+
+> [!NOTE]
+>
+> This will of course also work for other locales besides Dutch. Just make sure you install the right dictionary and the right language codes.
+
+> [!WARNING]
+>
+> Even though this will allow the use of Dutch words, you should never use Dutch words when naming variables, functions, classes, etc.

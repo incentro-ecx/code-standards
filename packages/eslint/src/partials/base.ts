@@ -50,6 +50,16 @@ export const baseConfigs: Linter.Config[] = [
       // We allow the use of expiring TODO comments, but we don't ever want
       // CI / CD pipelines to start failing because it's a different day.
       "unicorn/expiring-todo-comments": "off",
+
+      // We allow arrow functions to only use outer scope, because they are
+      // often passed as function references to event handlers (.on() / .off())
+      // and other similar constructs. Requiring them to be moved to the outer
+      // scope would require you to bind `this` with `.bind(this)`, which
+      // reduces readability.
+      "unicorn/consistent-function-scoping": [
+        "error",
+        { checkArrowFunctions: false },
+      ],
     },
   },
 ];

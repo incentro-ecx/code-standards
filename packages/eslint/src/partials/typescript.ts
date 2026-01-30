@@ -92,15 +92,45 @@ export const typescriptConfigs: Linter.Config[] = [
         { ignoreArrowShorthand: true },
       ],
 
+      // Disallowing passing async functions to places that expect
+      // void-returning can lead to conflicts with other rules. For example,
+      // when passing an async function to an event handler. To unregister
+      // these, the function passed to the handler should be the same reference
+      // to the function as when unsubscribing. Wrapping the function in an
+      // anonymous function would create a different reference, making it
+      // impossible to unsubscribe.
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        { checksVoidReturn: false },
+      ],
+
+      // We emulate the behavior of Typescript's `noUnusedLocals` and
+      // `noUnusedParameters` compiler options, but with more granularity by
+      // allowing unused variables and parameters that start with an
+      // underscore.
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          args: "all",
+          argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
+
       // This rule encourages replacing explicit type assertions with non-null
-      // assertions (`!`). It directly conflicts with @typescript-eslint/no-non-null-assertion,
-      // which we intentionally keep enabled to avoid introducing subtle runtime
-      // errors and hard-to-spot null assertion errors. However, there is a reason to
-      // want to opt-in to non-null assertions in some cases, for example when
-      // dealing with third-party libraries without proper types or when dealing
-      // with data structures where the type system cannot easily express the
-      // nullability. We disable this rule to allow explicit type
-      // assertions in such cases.
+      // assertions (`!`). It directly conflicts with
+      // @typescript-eslint/no-non-null-assertion, which we intentionally keep
+      // enabled to avoid introducing subtle runtime errors and hard-to-spot
+      // null assertion errors. However, there is a reason to want to opt-in to
+      // non-null assertions in some cases, for example when dealing with
+      // third-party libraries without proper types or when dealing with data
+      // structures where the type system cannot easily express the
+      // nullability. We disable this rule to allow explicit type assertions in
+      // such cases.
       "@typescript-eslint/non-nullable-type-assertion-style": "off",
     },
   },
