@@ -2,7 +2,7 @@
 
 ## 💫 Introduction
 
-A shared [Prettier](https://prettier.io/) configuration for formatting files. We use the base Prettier style (as mentioned in our [code style](https://incentro-ecx.github.io/code-standards/style-guide)) and add two plugins:
+A shared [Prettier](https://prettier.io/) configuration for formatting files. We use the base Prettier style (as mentioned in our [code style](https://standards.incentro.dev/style-guide)) and add two plugins:
 
 - [Organize Imports](https://www.npmjs.com/package/prettier-plugin-organize-imports) - Sorts and cleans imports.
 - [Package.json](https://npmjs.com/package/prettier-plugin-packagejson) - Sorts the properties in `package.json` files.

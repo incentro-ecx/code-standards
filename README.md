@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">Incentro IC - Code Standards</h1>
-  <strong><a href="https://incentro-ecx.github.io/code-standards">Read the docs</a></strong>
+  <strong><a href="https://standards.incentro.dev">Read the docs</a></strong>
   
   <br />
   <br />
@@ -12,7 +12,7 @@
 
 ## 💫 Introduction
 
-This repository contains shared resources related to the coding standards we use within [the Incentro Intelligent Commerce cel](https://github.com/incentro-ecx). It contains shared configurations for various tools which you can read more about in [the documentation](https://incentro-ecx.github.io/code-standards/configs), as well as a shared [style guide](https://incentro-ecx.github.io/code-standards/style-guide).
+This repository contains shared resources related to the coding standards we use within [the Incentro Intelligent Commerce cel](https://github.com/incentro-ecx). It contains shared configurations for various tools which you can read more about in [the documentation](https://standards.incentro.dev/configs), as well as a shared [style guide](https://standards.incentro.dev/style-guide).
 
 ## ⚙️ Configs
 
