@@ -1,5 +1,11 @@
 # @incentro-ic/config-prettier
 
+## 3.0.2
+
+### Patch Changes
+
+- Update dependencies. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
 ## 3.0.1
 
 ### Patch Changes

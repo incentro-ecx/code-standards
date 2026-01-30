@@ -1,5 +1,23 @@
 # @incentro-ic/config-eslint
 
+## 2.1.0
+
+### Minor Changes
+
+- Explicitly allow casting from null, but disallow the non null assertion operator ([#13](https://github.com/incentro-ecx/code-standards/pull/13))
+
+- Disable `unicorn/consistent-function-scoping` for arrow functions. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
+- Disable `@typescript-eslint/no-misused-promises` for void returns. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
+- Add new NestJS and React Router configs. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
+- Allow unused variables starting with an underscore in `@typescript-eslint/no-unused-vars`. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
+### Patch Changes
+
+- Update dependencies. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
 ## 2.0.0
 
 ### Major Changes

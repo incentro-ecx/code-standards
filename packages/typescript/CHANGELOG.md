@@ -1,5 +1,15 @@
 # @incentro-ic/config-typescript
 
+## 2.1.0
+
+### Minor Changes
+
+- Add NestJS and React Router configs. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
+### Patch Changes
+
+- Update dependencies. ([#17](https://github.com/incentro-ecx/code-standards/pull/17))
+
 ## 2.0.1
 
 ### Patch Changes
