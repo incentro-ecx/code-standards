@@ -32,6 +32,10 @@ const config: Linter.Config[] = [
           },
         },
       ],
+
+      // Throwing Response and Redirect objects in loaders and actions is a
+      // common pattern in React Router.
+      "@typescript-eslint/only-throw-error": "off",
     },
   },
 
